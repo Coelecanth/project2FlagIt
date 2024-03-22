@@ -10,4 +10,3 @@ function RandomNo () {
 }
 
 
-console.log 'num1';
