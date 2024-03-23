@@ -1,12 +1,45 @@
 
 console.log ("connected")
 
+    // comment - load flag index 
+
+    // call random to get random index flag 
+    // 
+    //display flag -eg use index to reference img asset
+
+    //user now selcts radio button 
+
+    //listen for submit
+
+    
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
+            } else {
+                let gameType = this.getAttribute("data-type");
+                runGame(gameType);
+            }
+        });
+    }
 
 
 /** Block comment  
 * randon Number function 
 */
-function RandomNo () {
+function randomNoMult () {
+var arr = [];
+while(arr.length < 4){
+    var r = Math.floor(Math.random() * 237) + 1;
+    if(arr.indexOf(r) === -1) arr.push(r);
+    }
+console.log(arr);
+}
+
+function RandomNo2 () {
     let num1 = Math.floor(Math.random() * 125) + 1;
     console.log (num1)
 }

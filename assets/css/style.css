@@ -1,3 +1,18 @@
+/*  #8edce6 - non-photo blue
+#d5dcf9 -  lavender
+#a7b0ca  - powder blue
+#725e54 - Umber
+#443627 - Taupe
+*/
+
+
 body { 
-    background: blue;
+    background: #725e54;
+}
+h1 {
+    color: #443627;
+}
+
+p {
+    color: #d5dcf9;
 }
