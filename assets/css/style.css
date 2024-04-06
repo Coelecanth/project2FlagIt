@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif+Caption:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
 
 /*  #8edce6 - non-photo blue
 #d5dcf9 -  lavender
@@ -29,15 +31,22 @@ body {
 
 h1 {
     color: #a7b0ca;
-    font-family: 'PT Serif Caption';
+    font-family: 'Josefin Slab';
     font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
 }
 .font-banner {
     font-family: 'Economica';
     font-size: 65px;
+    font-weight: 700;
+    font-style: italic;
 }
-
 p {
+    font-family: "Roboto Slab";
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
     color: #d5dcf9;
 }
 
@@ -49,7 +58,7 @@ p {
     border-radius: 1em;
     position: relative;
     top: 50px;
-
+    box-shadow: 0 8px 16px 0
 }
 
 .btext {
@@ -65,9 +74,10 @@ p {
     border-radius: 1em;
     padding: 2em 0;
     position: relative;
-    top: 100px;
+    top: 70px;
 }
 
+ 
 .ans-panel {
     width: 75%;
     background-color: #725e54;
@@ -76,12 +86,11 @@ p {
     border-radius: 1em;
     padding: 2em 0;
     position: relative;
-    top: 150px;
+    top: 100px;
 }
 .ans-text {
-    padding: 0.25em 0;
-    font-size: 25px;
-}
+     font-size: 25px;
+ }
 
 
 .score-panel {
@@ -92,10 +101,13 @@ p {
     border-radius: 1em;
     padding: 2em 0;
     position: relative;
-    top: 200px;
+    top: 140px;
 }
 
 .score-text {
-    padding: 0.25em 0;
-    font-size: 25px;
+    font-family: "Roboto Slab";
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal;
+   
 }
