@@ -1,18 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif+Caption:ital@0;1&display=swap');
+
 /*  #8edce6 - non-photo blue
 #d5dcf9 -  lavender
 #a7b0ca  - powder blue
 #725e54 - Umber
-#443627 - Taupe
+#443627 - Taupe 
 */
 
-
-body { 
-    background: #725e54;
-}
-h1 {
+.txt-taupe {
     color: #443627;
+}
+.txt-umber {
+    color: #725e54;
+}
+.txt-powederblue {
+    color: #a7b0ca;
+}
+.txt-lavendar {
+    color: #d5dcf9;
+}
+.txt-nonphotoblue {
+    color: #8edce6;
+}
+
+body {
+    background-color: #443627;
+}
+
+h1 {
+    color: #a7b0ca;
+    font-family: 'PT Serif Caption';
+    font-size: 35px;
+}
+.font-banner {
+    font-family: 'Economica';
+    font-size: 65px;
 }
 
 p {
     color: #d5dcf9;
+}
+
+.banner {
+    width: 75%;
+    background-color: #725e54;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    position: relative;
+    top: 50px;
+
+}
+
+.btext {
+    padding: 0.25em 0;
+    font-size: 50px;
+}
+
+.flagpanel {
+    width: 75%;
+    background-color: #725e54;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 2em 0;
+    position: relative;
+    top: 100px;
+}
+
+.ans-panel {
+    width: 75%;
+    background-color: #725e54;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 2em 0;
+    position: relative;
+    top: 150px;
+}
+.ans-text {
+    padding: 0.25em 0;
+    font-size: 25px;
+}
+
+
+.score-panel {
+    width: 75%;
+    background-color: #725e54;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 2em 0;
+    position: relative;
+    top: 200px;
+}
+
+.score-text {
+    padding: 0.25em 0;
+    font-size: 25px;
 }

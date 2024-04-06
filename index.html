@@ -1,35 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <title>Document</title>
- 
-	<script src="https://kit.fontawesome.com/6cf7958865.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
 
-	
-	<meta name="author" content="L5 Web Diploma student">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<title>FlagIt!- World Flags Game </title>
+
+    <!--- css file-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="author" content="L5 Web Diploma student">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Fontawesome CDN using script-->
+    <script src="https://kit.fontawesome.com/6cf7958865.js" crossorigin="anonymous"></script>
+
+    <title>FlagIt!- World Flags Game </title>
 
 
 </head>
+
 <body>
-   <span><i class="fa-solid fa-flag diaplay-5"></i> <h1>Flag - It!</h1></span>
-   
-   <div class="Panel">
+    <div class="bkgbody">
+        <div class="banner">
+            <h1>Welcome to <span class="font-banner txt-nonphotoblue">"Flag - It!"</span>
+            </h1>
+            <i class="fa-solid fa-flag diaplay-5"></i>
 
-   </div>
+        </div>
 
-   <div class="scoreboard">
-        <p class="timer"></p>
-        <p class="scores">Correct answer <span id="correct">0</span></p>
-        <p class="scores">Incorrect answer <span id="incorrect">0</span></p>
-   </div>
-   
+
+        <div class="flagpanel">
+            <!-- Flag place holder -->
+            <img src="assets/img/AA-flag.jpg" width="300" height="200">
+            <p>flag Image</p>
+        </div>
+
+        <div class="ans-panel">
+            <!-- Answer place holder place holder -->
+            <p class="ans-text">answer 1 answer 2</p>
+            <p class="ans-text">answer 3 answer 4 </p>
+        </div>
+
+        <div class="score-panel">
+
+            <span class="txt-lavendar score-text">
+                    tick-tock
+                    Correct answer
+                    Incorrect answer
+            </span>
+            
+        </div>
+
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
