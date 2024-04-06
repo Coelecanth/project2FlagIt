@@ -89,7 +89,11 @@ p {
     top: 100px;
 }
 .ans-text {
-     font-size: 25px;
+      font-size: 25px;
+      font-family: "Roboto Slab";
+      font-weight: 300;
+      font-style: normal;
+      color: #d5dcf9;
  }
 
 
