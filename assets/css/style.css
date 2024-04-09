@@ -58,7 +58,7 @@ p {
     border-radius: 1em;
     position: relative;
     top: 50px;
-    box-shadow: 0 8px 16px 0
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .btext {
@@ -75,6 +75,7 @@ p {
     padding: 2em 0;
     position: relative;
     top: 70px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
  

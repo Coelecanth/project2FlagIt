@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark"  style="background-color: #443627;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,46 +27,28 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="container-fluid justify-content-start">
-                    <button class="btn btn-outline-success me-2" type="button">Main button</button>
-                    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-                </form>
-                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">How to Play</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practice.html">Practice Flags</a>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </nav>
 
+
     <div class="bkgbody">
-        <div class="banner">
-            <span class="font-banner txt-nonphotoblue">"Flag - It!"</span>
-            <br>
-            <!-- <i class="fa-solid fa-flag-checkered font-banner txt-nonphotoblue"></i> -->
-            <img src="assets/img/AY-flag.jpg" width="75" height="50">
-            <h1> the fun and educational flag game </h1>
-        </div>
+
         <div class="flagpanel">
             <!-- Flag place holder -->
             <img src="assets/img/AA-flag.jpg" width="450" height="297">
         </div>
 
-        <div class="flex-container ans-panel ans-text">
-            <!-- Answer place holder place holder -->
-            <!-- see https://www.w3schools.com/css/css3_flexbox_responsive.asp -->
-            <div style="flex-basis: 200px align-self: center">answer 1 </div>
-            <div style="flex-basis: 200px align-self: center">answer 2 </div>
-            <div style="flex-basis: 200px align-self: center">answer 3 </div>
-            <div style="flex-basis: 200px align-self: center">answer 4 </div>
-        </div>
 
-        <div class="score-panel">
-
-            <span class="txt-lavendar score-text">
-                tick-tock
-                Correct answer
-                Incorrect answer
-            </span>
-
-        </div>
 
     </div>
     <script src="assets/js/script.js"></script>
