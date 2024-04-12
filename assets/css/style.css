@@ -50,6 +50,10 @@ p {
     color: #d5dcf9;
 }
 
+.nav-spacing {
+   top: 100px;
+    
+}
 .banner {
     width: 75%;
     background-color: #725e54;
@@ -88,6 +92,7 @@ p {
     padding: 2em 0;
     position: relative;
     top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .ans-text {
       font-size: 25px;
@@ -107,6 +112,7 @@ p {
     padding: 2em 0;
     position: relative;
     top: 140px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .score-text {
