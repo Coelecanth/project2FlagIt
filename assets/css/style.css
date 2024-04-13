@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
 /*  #8edce6 - non-photo blue
 #d5dcf9 -  lavender
 #a7b0ca  - powder blue
@@ -9,15 +9,19 @@
 .txt-taupe {
     color: #443627;
 }
+
 .txt-umber {
     color: #725e54;
 }
+
 .txt-powederblue {
     color: #a7b0ca;
 }
+
 .txt-lavendar {
     color: #d5dcf9;
 }
+
 .txt-nonphotoblue {
     color: #8edce6;
 }
@@ -33,12 +37,14 @@ h1 {
     font-weight: 400;
     font-style: normal;
 }
+
 .font-banner {
     font-family: 'Economica';
     font-size: 65px;
     font-weight: 700;
     font-style: italic;
 }
+
 p {
     font-family: "Roboto Slab";
     font-size: 20px;
@@ -57,6 +63,7 @@ p {
     border-radius: 1em;
     padding: 0.5em 0;
 }
+
 .banner {
     width: 97%;
     background-color: #725e54;
@@ -64,15 +71,16 @@ p {
     text-align: center;
     margin: auto;
     border-radius: 1em;
-    padding: 2em 0;
+    padding: 1em 0;
     position: relative;
-   
+
 }
 
 .btext {
     padding: 0.25em 0;
     font-size: 50px;
 }
+
 .wrap-flag-panel {
     width: 70%;
     background-color: #a7b0ca;
@@ -83,6 +91,7 @@ p {
     border-radius: 1em;
     padding: 0.5em 0;
 }
+
 .flagpanel {
     width: 97%;
     background-color: #725e54;
@@ -90,12 +99,12 @@ p {
     text-align: center;
     margin: auto;
     border-radius: 1em;
-    padding: 2em 0;
+    padding: 1em 0;
     position: relative;
-   
+
 }
 
- 
+
 .ans-panel {
     width: 75%;
     background-color: #725e54;
@@ -105,15 +114,16 @@ p {
     padding: 2em 0;
     position: relative;
     top: 100px;
-    
+
 }
+
 .ans-text {
-      font-size: 25px;
-      font-family: "Roboto Slab";
-      font-weight: 300;
-      font-style: normal;
-      color: #d5dcf9;
- }
+    font-size: 25px;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    font-style: normal;
+    color: #d5dcf9;
+}
 
 
 .score-panel {
@@ -125,7 +135,7 @@ p {
     text-align: center;
     border-radius: 1em;
     padding: 0.5em 0;
-    
+
 }
 
 .score-text {
@@ -133,20 +143,22 @@ p {
     font-size: 30px;
     font-weight: 300;
     font-style: normal;
-   
+
 }
+
 /* Copyright panel and text styles  */
 .wrap-copyr-panel {
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
     left: 15%;
-    top: 66%;
+    top: 70%;
     text-align: center;
     border-radius: 1em;
     padding: 0.5em 0;
-    
+
 }
+
 .copyr-panel {
     width: 97%;
     background-color: #725e54;
@@ -154,19 +166,19 @@ p {
     text-align: center;
     margin: auto;
     border-radius: 1em;
-    padding: 2em 0;
+    padding: 1em 0;
     position: relative;
-    
+
 }
 
 .copyr-text {
-   position: absolute;
-   bottom: 8px;
-   left: 16px;
-   font-size: 18px
-    
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px
 }
-/* how to play formatting styles  */
+
+/* ==============how to play formatting styles ================ */
 
 
 .htp-text-heading {
@@ -184,8 +196,9 @@ p {
     font-family: "Roboto Slab";
     font-weight: 300;
     font-style: normal;
-    
+
 }
+
 .htp-wrap-copyr-panel {
     width: 70%;
     background-color: #a7b0ca;
@@ -195,4 +208,143 @@ p {
     text-align: center;
     border-radius: 1em;
     padding: 0.5em 0;
+}
+
+/* ==============gamepage  formatting styles===========  */
+
+.game-wrap-banner-panel {
+    top: 9%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
+
+.game-banner {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 0.5em 0;
+    position: relative;
+
+}
+
+.game-wrap-flag-panel {
+    top: 28%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
+
+.game-flag-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+}
+
+.game-wrap-ans-panel {
+    top: 54%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+
+}
+
+.game-ans-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
+
+.game-ans-text {
+    font-size: 25px;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    font-style: normal;
+    color: #d5dcf9;
+}
+
+.game-wrap-score {
+    top: 77%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
+
+.game-score-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 98%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
+
+.game-score-text {
+    font-family: "Roboto Slab";
+    font-size: 25px;
+    font-weight: 700;
+    font-style: bold ;
+}
+
+.game-wrap-copyr-panel {
+    top: 87%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+
+}
+
+.game-copyr-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+}
+
+.game-copyr-text {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px
 }

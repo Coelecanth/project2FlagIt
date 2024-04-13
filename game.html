@@ -32,42 +32,67 @@
                     <a class="btn btn-info btn-block btn-lg" type="button" href="htp.html" role="button">How to Play</a>
                     <a class="btn btn-info btn-block btn-lg" type="button" href="stf.html" role="button">Study the
                         Flags</a>
-                   
+
             </div>
         </div>
     </nav>
-    <div class="wrap-banner-panel">
-        <div id="gameBody" class="banner">
-             <span class="font-banner txt-nonphotoblue">"Flag-It!"</span>
-                   
-             <h1> Press start to play Flag-It! </h1>
-         </div>
- 
-         </div>
-  
-         <div class="wrap-flag-panel">
-             <div id="gameBody" class="flagpanel">
-                 <!-- Flag place holder width="450" height="297"-->
-                 <img src="assets/img/AA-flag.jpg" width="300" height="200">
-             </div>
-         </div>
- 
- <div class="bkgbody nav-spacing">
-     </div>
- 
-     <div class="wrap-copyr-panel score-text">
-         <div class="copyr-panel coppyr-text">
-             <footer>
-                 <p class="copyr-text">Copyright ©Megalops games @2024</p>
-             </footer>
-         </div>
-     </div>        
-        
-        <script src="assets/js/script.js"></script>
-        <script src="assets/js/dictionary.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    <div class="game-wrap-banner-panel">
+        <div id="gameBody" class="game-banner">
+            <span class="font-banner txt-nonphotoblue">"Flag-It!"</span>
+
+            <h1> Press start to play Flag-It! </h1>
+        </div>
+
+    </div>
+
+    <div class="game-wrap-flag-panel">
+        <div id="gameBody" class="game-flag-panel">
+            <!-- Flag place holder width="450" height="297"-->
+            <img src="assets/img/AA-flag.jpg" width="300" height="200">
+        </div>
+    </div>
+    <!-- text formatting applied a this level as adversely affect spacing on page -->
+    <div class="game-wrap-ans-panel game-ans-text">
+        <div id="gameBody" class="game-ans-panel">
+            <p>Select Your Answer Here </p>
+            <button data-type="answer1" class="btn btn-info mx-4 my-1" type="submit">answer1</button>
+
+            <button data-type="answer2" class="btn btn-info mx-4 my-1" type="submit">answer2</button>
+
+            <button data-type="answer3" class="btn btn-info mx-4 my-1" type="submit">answer3</button>
+
+            <button data-type="answer4" class="btn btn-info mx-4 my-1" type="submit">answer4</button>
+            <br>
+
+            <button data-type="Start" class="btn btn-danger mx-4 mt-4" type="submit">Start Game</button>
+        </div>
+    </div>
+    <div class="game-wrap-score">
+        <div id="gameBody" class="game-score-panel game-score-text">
+            <span>
+                <div class="d-inline mx-5 my-2 ">Question Number </div>
+                <div class="d-inline mx-5 my-2 ">Score_correct </div>
+                <div class="d-inline mx-5 my-2 ">Score_incorrect </div>
+            </span>
+
+        </div>
+    </div>
+
+
+    <div class="game-wrap-copyr-panel">
+        <div class="game-copyr-panel ">
+            <footer>
+                <img src="assets/img/AY-flag.jpg" width="75" height="50">
+                <p class="game-copyr-text">Copyright ©Megalops games @2024</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/dictionary.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
