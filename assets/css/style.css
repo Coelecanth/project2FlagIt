@@ -1,14 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
-
-
 /*  #8edce6 - non-photo blue
 #d5dcf9 -  lavender
 #a7b0ca  - powder blue
 #725e54 - Umber
 #443627 - Taupe 
 */
-
 .txt-taupe {
     color: #443627;
 }
@@ -44,42 +41,58 @@ h1 {
 }
 p {
     font-family: "Roboto Slab";
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 300;
     font-style: normal;
     color: #d5dcf9;
 }
 
-.nav-spacing {
-   top: 100px;
-    
+.wrap-banner-panel {
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    top: 8%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
 }
 .banner {
-    width: 75%;
+    width: 97%;
     background-color: #725e54;
+    min-height: 97%;
     text-align: center;
     margin: auto;
     border-radius: 1em;
+    padding: 2em 0;
     position: relative;
-    top: 50px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
 }
 
 .btext {
     padding: 0.25em 0;
     font-size: 50px;
 }
-
+.wrap-flag-panel {
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    top: 37%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
 .flagpanel {
-    width: 75%;
+    width: 97%;
     background-color: #725e54;
+    min-height: 97%;
     text-align: center;
     margin: auto;
     border-radius: 1em;
     padding: 2em 0;
     position: relative;
-    top: 70px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
 }
 
  
@@ -92,7 +105,7 @@ p {
     padding: 2em 0;
     position: relative;
     top: 100px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    
 }
 .ans-text {
       font-size: 25px;
@@ -104,15 +117,15 @@ p {
 
 
 .score-panel {
-    width: 75%;
-    background-color: #725e54;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    top: 63%;
     text-align: center;
-    margin: auto;
     border-radius: 1em;
-    padding: 2em 0;
-    position: relative;
-    top: 140px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    padding: 0.5em 0;
+    
 }
 
 .score-text {
@@ -121,4 +134,65 @@ p {
     font-weight: 300;
     font-style: normal;
    
+}
+/* Copyright panel and text styles  */
+.wrap-copyr-panel {
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    top: 66%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+    
+}
+.copyr-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 2em 0;
+    position: relative;
+    
+}
+
+.copyr-text {
+   position: absolute;
+   bottom: 8px;
+   left: 16px;
+   font-size: 18px
+    
+}
+/* how to play formatting styles  */
+
+
+.htp-text-heading {
+    text-align: left;
+    font-family: 'Economica';
+    font-size: 45px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.htp-text-para {
+    text-align: left;
+    padding-left: 5%;
+    font-size: 25px;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    font-style: normal;
+    
+}
+.htp-wrap-copyr-panel {
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    top: 79%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
 }
