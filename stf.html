@@ -39,53 +39,50 @@
     </nav>
     <div class="stf-wrap-banner-panel">
         <div id="gameBody" class="stf-banner">
-            <span class="font-banner txt-nonphotoblue">"Flag-It!"</span>
+            <span class="stf-head txt-nonphotoblue">"Flag-It!"</span>
             <br>
-            <h1>Study the Flag-It! flags here</h1>
+            <span class="stf-sub-head">Flag-It! - Study flags here</span>  
         </div>
     </div>
 
-    <div class="container wrap-flag-panel">
-        <div id="gameBody" class="row flagpanel">
-            <!-- Flag place holder width="450" height="297"-->
-            <img src="assets/img/AA-flag.jpg" width="150" height="100">
-        </div>
-    </div>
-
-
-    <div class="container wrap-copyr-panel score-text">
-        <div class="copyr-panel img-fluid">
-            <footer class="row">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+    <div class="stf-wrap-flag-panel">
+        <div id="gameBody" class="stf-flagpanel">
+            <!--- modal button-->
+            <span><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
                 </button>
-                <img src="assets/img/AY-flag.jpg" width="75" height="50">
-                <p class="copyr-text">Copyright ©Megalops games @2024</p>
+            </span>
+
+        </div>
+    </div>
+    <div class="stf-wrap-copyr-panel">
+        <div class="stf-copyr-panel">
+            <footer>
+                <img src="assets/img/AY-flag.jpg">
+                <p class="stf-copyr-text">Copyright ©Megalops games @2024</p>
             </footer>
         </div>
     </div>
- 
-    <!--- modal button-->   
-    
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <!-- Modal -- with bootstrap> -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Country name here</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body stf-modal-format">
+                    <span><img src="assets/img/AA-flag.jpg" width="150" height="100"></span>
+                    <br>
+                    <span> Country </span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+                 </div>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div>   
+    </div>
 
 
 

@@ -37,7 +37,34 @@ p {
     font-style: normal;
     color: #d5dcf9;
 }
+
+/* target image in footer*/
+div footer img {
+    max-width: 7%;
+    height: auto;
+}
+
 /* stf formatting and styles  */
+.stf-head {
+    font-family: 'Economica';
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+}
+.stf-sub-head {
+    font-family: 'Josefin Slab';
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+.stf-modal-format {
+    text-align: center;
+    font-family: 'Josefin Slab';
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .stf-wrap-banner-panel {
     top: 10%;
     width: 70%;
@@ -49,7 +76,7 @@ p {
     padding: 0.5em 0;
 }
 
-.stf-ind-banner {
+.stf-banner {
     width: 97%;
     background-color: #725e54;
     min-height: 97%;
@@ -60,7 +87,29 @@ p {
     position: relative;
 
 }
+.stf-wrap-flag-panel {
+    top: 35%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
 
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
+
+.stf-flagpanel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
 
 .stf-ans-panel {
     width: 75%;
@@ -82,7 +131,7 @@ p {
     color: #d5dcf9;
 }
 
-.score-panel {
+.sf-score-panel {
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -94,12 +143,42 @@ p {
 
 }
 
-.score-text {
+.stf-score-text {
     font-family: "Roboto Slab";
     font-size: 30px;
     font-weight: 300;
     font-style: normal;
 
+}
+.stf-wrap-copyr-panel {
+    top: 77%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+
+}
+
+.stf-copyr-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
+
+.stf-copyr-text {
+    position: absolute;
+    bottom: 0.1em;
+    left: 2.5em;
+    font-size: 1em
 }
 
 /* index panel and text styles  */
@@ -139,12 +218,6 @@ p {
     position: relative;
 
 }
-
-.ind-btext {
-    padding: 0.25em 0;
-    font-size: 50px;
-}
-
 .ind-wrap-flag-panel {
     top: 35%;
     width: 70%;
@@ -200,10 +273,7 @@ p {
     font-size: 1em
 }
 
-div footer img {
-    max-width: 7%;
-    height: auto;
-}
+
 
 /* ==============how to play formatting styles ================ */
 .htp-head {
@@ -278,13 +348,21 @@ div footer img {
 }
 /* ==============gamepage  formatting styles===========  */
 
-.game-img-sizing {
-    max-width: 40%;
-    height: auto;
+.game-head {
+    font-family: 'Economica';
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: normal;
 }
 
+.game-sub-head {
+    font-family: 'Josefin Slab';
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
 .game-wrap-banner-panel {
-    top: 12%;
+    top: 11%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -301,13 +379,13 @@ div footer img {
     text-align: center;
     margin: auto;
     border-radius: 1em;
-    padding: 0.5em 0;
+    padding: 0.25em 0;
     position: relative;
 
 }
 
 .game-wrap-flag-panel {
-    top: 43%;
+    top: 11%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -329,7 +407,7 @@ div footer img {
 }
 
 .game-wrap-ans-panel {
-    top: 70%;
+    top: 41%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -353,7 +431,7 @@ div footer img {
 }
 
 .game-ans-text {
-    font-size: 25px;
+    font-size: 1em;
     font-family: "Roboto Slab";
     font-weight: 300;
     font-style: normal;
@@ -361,7 +439,7 @@ div footer img {
 }
 
 .game-wrap-score {
-    top: 77%;
+    top: 60%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -391,7 +469,7 @@ div footer img {
 }
 
 .game-wrap-copyr-panel {
-    top: 87%;
+    top: 100%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -415,7 +493,7 @@ div footer img {
 
 .game-copyr-text {
     position: absolute;
-    bottom: 8px;
-    left: 16px;
-    font-size: 18px
+    bottom: 0.1em;
+    left: 2.5em;
+    font-size: 1em
 }
