@@ -1,3 +1,11 @@
+let maxQuestions = 25;
+
+const totalQuestions = document.getElementById("questions-total");
+const askedQuestions = document.getElementById("questions-asked");
+const correctQuestions = document.getElementById("questions-correct");
+const wrongQuestions = document.getElementById("questions-wrong");
+const gameStart = document.getElementById("start-game");
+
 // comment - load flag index 
 // call random to get random index flag 
 // 
@@ -7,30 +15,27 @@
 
 console.log("connected")
 
-// Wait for the DOM to finish loading before running the game
-// // Get the button elements and add event listeners to them
+totalQuestions.innerText = maxQuestions;
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+// Wait for the DOM to finish loading before running the game startr
+// Get the button elements and add event listeners for 
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "answer1") {
-                alert("You clicked answer1");
-                console.log("ans1")
-            } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
-            }
-        });
-      });
-//     }
-// function hide() {
-//     // document.getElementById('gameBody').hidden = true
-//     // document.getElementById('gameBody').style.display = 'none'
-//     document.getElementById("gameBody").classList.add("hide")
-//  }
-//  function show() {
-//     // document.getElementById('gameBody').hidden = false
-//     // document.getElementById('gameBody').style.display = 'none'
-//  }
+gameStart.addEventListener("click", initNewgame);
+
+function initNewgame() {
+    alert("submit pressed");
+    generateStudy();
+
+}
+
+function generateStudy() {
+    // generate a dynamic list of all countries on page load
+    countryArray.forEach(country => {
+        studyContainer.innerHTML += `
+            <div class="study-row txt-white modal-open" data-modal="study" 
+            data-country="${country.locale}" 
+            data-iso="${country.flag}">
+            </div>`;
+    });
+}
+

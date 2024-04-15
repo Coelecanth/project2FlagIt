@@ -59,20 +59,18 @@
             <button data-type="answer1" class="btn btn-md btn-info mx-4 my-1" type="submit">answer1</button>
 
             <button data-type="answer2" class="btn btn-md btn-info mx-4 my-1" type="submit">answer2</button>
-
             <button data-type="answer3" class="btn btn-md btn-info mx-4 my-1" type="submit">answer3</button>
-
             <button data-type="answer4" class="btn btn-md btn-info mx-4 my-1" type="submit">answer4</button>
             <br>
-
-            <button data-type="Start" class="btn btn-md btn-danger mx-4 mt-2" type="submit">Start Game</button>
+            <button data-type="Start" class="btn btn-md btn-danger mx-4 mt-2" id="start-game">Start Game</button>
         </div>
         <hr class="ind-hr-format">
-        <div id="gameBody" class="game-score-panel game-score-text">
+        <div id="gameBody" class="game-score-panel game-score-text">S
             <span>
-                <div class="d-inline mx-4 my-2 ">Question Number </div>
-                <div class="d-inline mx-4 my-2 ">Score_correct </div>
-                <div class="d-inline mx-4 my-2 ">Score_incorrect </div>
+                <div class="d-inline mx-4 my-2" id="questions-asked">empty</div>
+                <div class="d-inline my-2" id="questions-total">0</div>
+                <div class="d-inline mx-4 my-2" id="questions-correct">Score_correct </div>
+                <div class="d-inline mx-4 my-2" id="questions-wrong">Score_incorrect </div>
             </span>
 
         </div>
@@ -85,7 +83,7 @@
         </div>
     </div>
 
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/game.js"></script>
     <script src="assets/js/dictionary.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
