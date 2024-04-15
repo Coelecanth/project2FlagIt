@@ -30,69 +30,26 @@ body {
     background-color: #443627;
 }
 
-h1 {
-    color: #a7b0ca;
-    font-family: 'Josefin Slab';
-    font-size: 35px;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.font-banner {
-    font-family: 'Economica';
-    font-size: 65px;
-    font-weight: 700;
-    font-style: italic;
-}
-
 p {
     font-family: "Roboto Slab";
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 300;
     font-style: normal;
     color: #d5dcf9;
 }
-
-.wrap-banner-panel {
+/* stf formatting and styles  */
+.stf-wrap-banner-panel {
+    top: 10%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
     left: 15%;
-    top: 8%;
     text-align: center;
     border-radius: 1em;
     padding: 0.5em 0;
 }
 
-.banner {
-    width: 97%;
-    background-color: #725e54;
-    min-height: 97%;
-    text-align: center;
-    margin: auto;
-    border-radius: 1em;
-    padding: 1em 0;
-    position: relative;
-
-}
-
-.btext {
-    padding: 0.25em 0;
-    font-size: 50px;
-}
-
-.wrap-flag-panel {
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    top: 37%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-}
-
-.flagpanel {
+.stf-ind-banner {
     width: 97%;
     background-color: #725e54;
     min-height: 97%;
@@ -105,7 +62,7 @@ p {
 }
 
 
-.ans-panel {
+.stf-ans-panel {
     width: 75%;
     background-color: #725e54;
     text-align: center;
@@ -117,14 +74,13 @@ p {
 
 }
 
-.ans-text {
+.stf-ans-text {
     font-size: 25px;
     font-family: "Roboto Slab";
     font-weight: 300;
     font-style: normal;
     color: #d5dcf9;
 }
-
 
 .score-panel {
     width: 70%;
@@ -146,20 +102,33 @@ p {
 
 }
 
-/* Copyright panel and text styles  */
-.wrap-copyr-panel {
+/* index panel and text styles  */
+.ind-head {
+    font-family: 'Economica';
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ind-sub-head {
+    font-family: 'Josefin Slab';
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ind-wrap-banner-panel {
+    top: 10%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
     left: 15%;
-    top: 70%;
     text-align: center;
     border-radius: 1em;
     padding: 0.5em 0;
-
 }
 
-.copyr-panel {
+.ind-banner {
     width: 97%;
     background-color: #725e54;
     min-height: 97%;
@@ -171,49 +140,151 @@ p {
 
 }
 
-.copyr-text {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    font-size: 18px
+.ind-btext {
+    padding: 0.25em 0;
+    font-size: 50px;
 }
 
-/* ==============how to play formatting styles ================ */
-
-
-.htp-text-heading {
-    text-align: left;
-    font-family: 'Economica';
-    font-size: 45px;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.htp-text-para {
-    text-align: left;
-    padding-left: 5%;
-    font-size: 25px;
-    font-family: "Roboto Slab";
-    font-weight: 300;
-    font-style: normal;
-
-}
-
-.htp-wrap-copyr-panel {
+.ind-wrap-flag-panel {
+    top: 35%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
     left: 15%;
-    top: 79%;
+
     text-align: center;
     border-radius: 1em;
     padding: 0.5em 0;
 }
 
+.ind-flagpanel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
+
+.ind-wrap-copyr-panel {
+    top: 77%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+
+}
+
+.ind-copyr-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
+
+.ind-copyr-text {
+    position: absolute;
+    bottom: 0.1em;
+    left: 2.5em;
+    font-size: 1em
+}
+
+div footer img {
+    max-width: 7%;
+    height: auto;
+}
+
+/* ==============how to play formatting styles ================ */
+.htp-head {
+    font-family: 'Economica';
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.htp-wrap-banner-panel {
+    top: 10%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
+
+.htp-banner {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+}
+.htp-text-heading {
+    text-align: left;
+    font-family: 'Economica';
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+}
+.htp-text-para {
+    text-align: left;
+    padding-left: 5%;
+    font-size: 1em;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    font-style: normal;
+}
+
+.htp-wrap-copyr-panel {
+    top: 79%;
+    width: 70%;
+    background-color: #a7b0ca;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
+.htp-copyr-panel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 97%;
+    text-align: center;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+}    
+.htp-copyr-text {   
+    position: absolute;
+    bottom: 0.1em;
+    left: 2.5em;
+    font-size: 1em
+}
 /* ==============gamepage  formatting styles===========  */
 
+.game-img-sizing {
+    max-width: 40%;
+    height: auto;
+}
+
 .game-wrap-banner-panel {
-    top: 9%;
+    top: 12%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -236,7 +307,7 @@ p {
 }
 
 .game-wrap-flag-panel {
-    top: 28%;
+    top: 43%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -258,7 +329,7 @@ p {
 }
 
 .game-wrap-ans-panel {
-    top: 54%;
+    top: 70%;
     width: 70%;
     background-color: #a7b0ca;
     position: absolute;
@@ -316,7 +387,7 @@ p {
     font-family: "Roboto Slab";
     font-size: 25px;
     font-weight: 700;
-    font-style: bold ;
+    font-style: bold;
 }
 
 .game-wrap-copyr-panel {
