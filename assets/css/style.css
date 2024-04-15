@@ -42,6 +42,7 @@ p {
 div footer img {
     max-width: 7%;
     height: auto;
+    
 }
 
 
@@ -196,8 +197,6 @@ div footer img {
     font-weight: 400;
     font-style: normal;
 }
-
-  
 .ind-wrap-banner-panel {
     top: 10%;
     width: 70%;
@@ -220,8 +219,6 @@ div footer img {
     position: relative;
 
 }
-
-
 .ind-flagpanel {
     width: 97%;
     background-color: #725e54;
@@ -233,7 +230,6 @@ div footer img {
     position: relative;
 
 }
-
 .ind-copyr-panel {
     width: 97%;
     background-color: #725e54;
@@ -245,20 +241,17 @@ div footer img {
     position: relative;
 
 }
-
 .ind-copyr-text {
     position: absolute;
-    bottom: 0.1em;
+    bottom: 0;
     left: 2.5em;
-    font-size: 1em
+    font-size: 0.5em
 }
 hr.ind-hr-format {
     border-top: 5px solid #a7b0ca;
     margin: 0 auto;
     width: 97%;
 }
-
-
 /* ==============how to play formatting styles ================ */
 .htp-head {
     font-family: 'Economica';
@@ -281,7 +274,7 @@ hr.ind-hr-format {
 .htp-banner {
     width: 97%;
     background-color: #725e54;
-    min-height: 97%;
+    min-height: 98%;
     text-align: center;
     margin: auto;
     border-radius: 1em;
@@ -326,9 +319,9 @@ hr.ind-hr-format {
 }    
 .htp-copyr-text {   
     position: absolute;
-    bottom: 0.1em;
+    bottom: 0;
     left: 2.5em;
-    font-size: 1em
+    font-size: 0.8em
 }
 /* ==============gamepage  formatting styles===========  */
 
@@ -477,7 +470,7 @@ hr.ind-hr-format {
 
 .game-copyr-text {
     position: absolute;
-    bottom: 0.1em;
+    bottom: 0;
     left: 2.5em;
-    font-size: 1em
+    font-size: 0.8em
 }
