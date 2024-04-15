@@ -42,7 +42,7 @@ p {
 div footer img {
     max-width: 7%;
     height: auto;
-    
+
 }
 
 
@@ -53,12 +53,14 @@ div footer img {
     font-weight: 700;
     font-style: normal;
 }
+
 .stf-sub-head {
     font-family: 'Josefin Slab';
     font-size: 1.5em;
     font-weight: 400;
     font-style: normal;
 }
+
 .stf-modal-format {
     text-align: center;
     font-family: 'Josefin Slab';
@@ -89,17 +91,6 @@ div footer img {
     position: relative;
 
 }
-.stf-wrap-flag-panel {
-    top: 35%;
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-}
 
 .stf-flagpanel {
     width: 97%;
@@ -110,57 +101,6 @@ div footer img {
     border-radius: 1em;
     padding: 1em 0;
     position: relative;
-
-}
-
-.stf-ans-panel {
-    width: 75%;
-    background-color: #725e54;
-    text-align: center;
-    margin: auto;
-    border-radius: 1em;
-    padding: 2em 0;
-    position: relative;
-    top: 100px;
-
-}
-
-.stf-ans-text {
-    font-size: 25px;
-    font-family: "Roboto Slab";
-    font-weight: 300;
-    font-style: normal;
-    color: #d5dcf9;
-}
-
-.sf-score-panel {
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    top: 63%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-
-}
-
-.stf-score-text {
-    font-family: "Roboto Slab";
-    font-size: 30px;
-    font-weight: 300;
-    font-style: normal;
-
-}
-.stf-wrap-copyr-panel {
-    top: 77%;
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
 
 }
 
@@ -178,9 +118,9 @@ div footer img {
 
 .stf-copyr-text {
     position: absolute;
-    bottom: 0.1em;
+    bottom: 0;
     left: 2.5em;
-    font-size: 1em
+    font-size: 0.5em
 }
 
 /* index panel and text styles  */
@@ -197,6 +137,7 @@ div footer img {
     font-weight: 400;
     font-style: normal;
 }
+
 .ind-wrap-banner-panel {
     top: 10%;
     width: 70%;
@@ -219,6 +160,7 @@ div footer img {
     position: relative;
 
 }
+
 .ind-flagpanel {
     width: 97%;
     background-color: #725e54;
@@ -230,6 +172,7 @@ div footer img {
     position: relative;
 
 }
+
 .ind-copyr-panel {
     width: 97%;
     background-color: #725e54;
@@ -241,17 +184,20 @@ div footer img {
     position: relative;
 
 }
+
 .ind-copyr-text {
     position: absolute;
     bottom: 0;
     left: 2.5em;
     font-size: 0.5em
 }
+
 hr.ind-hr-format {
     border-top: 5px solid #a7b0ca;
     margin: 0 auto;
     width: 97%;
 }
+
 /* ==============how to play formatting styles ================ */
 .htp-head {
     font-family: 'Economica';
@@ -281,6 +227,7 @@ hr.ind-hr-format {
     padding: 1em 0;
     position: relative;
 }
+
 .htp-text-heading {
     text-align: left;
     font-family: 'Economica';
@@ -288,6 +235,7 @@ hr.ind-hr-format {
     font-weight: 700;
     font-style: italic;
 }
+
 .htp-text-para {
     text-align: left;
     padding-left: 5%;
@@ -307,6 +255,7 @@ hr.ind-hr-format {
     border-radius: 1em;
     padding: 0.5em 0;
 }
+
 .htp-copyr-panel {
     width: 97%;
     background-color: #725e54;
@@ -316,13 +265,15 @@ hr.ind-hr-format {
     border-radius: 1em;
     padding: 1em 0;
     position: relative;
-}    
-.htp-copyr-text {   
+}
+
+.htp-copyr-text {
     position: absolute;
     bottom: 0;
     left: 2.5em;
     font-size: 0.8em
 }
+
 /* ==============gamepage  formatting styles===========  */
 
 .game-head {
@@ -338,6 +289,7 @@ hr.ind-hr-format {
     font-weight: 400;
     font-style: normal;
 }
+
 .game-wrap-banner-panel {
     top: 11%;
     width: 70%;
@@ -361,17 +313,6 @@ hr.ind-hr-format {
 
 }
 
-.game-wrap-flag-panel {
-    top: 11%;
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-}
-
 .game-flag-panel {
     width: 97%;
     background-color: #725e54;
@@ -381,18 +322,6 @@ hr.ind-hr-format {
     border-radius: 1em;
     padding: 1em 0;
     position: relative;
-}
-
-.game-wrap-ans-panel {
-    top: 41%;
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-
 }
 
 .game-ans-panel {
@@ -415,17 +344,6 @@ hr.ind-hr-format {
     color: #d5dcf9;
 }
 
-.game-wrap-score {
-    top: 60%;
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-}
-
 .game-score-panel {
     width: 97%;
     background-color: #725e54;
@@ -443,18 +361,6 @@ hr.ind-hr-format {
     font-size: 1em;
     font-weight: 700;
     font-style: bold;
-}
-
-.game-wrap-copyr-panel {
-    top: 100%;
-    width: 70%;
-    background-color: #a7b0ca;
-    position: absolute;
-    left: 15%;
-    text-align: center;
-    border-radius: 1em;
-    padding: 0.5em 0;
-
 }
 
 .game-copyr-panel {
