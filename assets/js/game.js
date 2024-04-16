@@ -23,54 +23,46 @@ totalQuestions.innerText = maxQuestions;
 // gameStart.addEventListener("click", initNewgame);
 
 document.addEventListener("DOMContentLoaded", function() {
-        for (let button of gameStart) {
+        for (let button of gameStart ) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+            switch (selectedGame) {
+                case "allflags-game":
+                    maxQuestions = countryArray.length;
+                    totalQuestions.innerText = maxQuestions;
+                    newAllFlags()
+                    break;
+        
+                case "europe-game":
+                    maxQuestions = 25;
+                    newAllFlags()
+                    break;
+                case "americas-game":
+                    maxQuestions = 25;
+                    break;
+                     
+                case "asia-game":
+                    maxQuestions = 25;
+                    break;
+                case "oceania-game":
+                    maxQuestions = 25;
+                    break;
+                case "africa - game":
+                    maxQuestions = 25;
+                    break;
+                default:
+                    selectedGame = "short-game"
+                    maxQuestions = 25;
+                    break;
             }
         });
     }
-
-    
-
 });
 
 function initNewgame() {
     alert("submit pressed");
     // determine which game has been selected
-    selectedGame =gamestart = 
-    switch (selectedGame) {
-        case "allflags-game":
-            maxQuestions = countryArray.length;
-            totalQuestions.innerText = maxQuestions;
-            newAllFlags()
-            break;
+   
 
-        case "europe-game":
-            maxQuestions = 25;
-            newAllFlags()
-            break;
-        case "americas-game":
-            maxQuestions = 25;
-            break;
-             
-        case "asia-game":
-            maxQuestions = 25;
-            break;
-        case "oceania-game":
-            maxQuestions = 25;
-            break;
-        case "africa - game":
-            maxQuestions = 25;
-            break;
-        default:
-            selectedGame = "short-game"
-            maxQuestions = 25;
-            break;
-    }
 
 
 }
