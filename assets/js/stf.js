@@ -14,7 +14,7 @@ generateStudy();
             studyContainer.innerHTML += `
                 <div class="study-row txt-white modal-open" data-modal="study" 
                 data-country="${country.locale}" 
-                data-iso="${country.flag}">
+                data-flag="${country.flag}">
                 </div>`;
         });
     }

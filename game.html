@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg commit navbar-dark" style="background-color: #443627;">
+    <nav class="navbar fixed-top navbar-expand-xl commit navbar-dark" style="background-color: #443627;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -28,12 +28,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <form class="container-fluid justify-content-start">
-                    <a class="btn btn-info btn-block btn-md" type="button" href="index.html" role="button">Home</a>
-                    <a class="btn btn-info btn-block btn-md" type="button" href="htp.html" role="button">How to Play</a>
-                    <a class="btn btn-info btn-block btn-md" type="button" href="stf.html" role="button">Study the
+                    <a class="btn btn-info btn-block btn-sm" type="button" href="index.html" role="button">Home</a>
+                    <a class="btn btn-info btn-block btn-sm" type="button" href="htp.html" role="button">How to Play</a>
+                    <a class="btn btn-info btn-block btn-sm" type="button" href="stf.html" role="button">Study the
                         Flags</a>
-
+                    <a class="txt-lavendar game-nav-head navbar-brand my-2 mx-2" href="#">Start game Here -></a>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="short-game">Short
+                        Game</button>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="europe-game">Europe
+                        Flags</button>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="americas-game">Americas
+                        Fags</button>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="asia-game">Asia Flags</button>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="africa-game">Africa
+                        Flags</button>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="oceania-game">Oceania
+                        Flags</button>
+                    <button data-type="Start" class="btn btn-sm btn-block btn-danger" id="allflags-game">All
+                        Flags</button>
             </div>
+        </div>
         </div>
     </nav>
     <div class="game-wrap-banner-panel">
@@ -45,8 +59,6 @@
         </div>
         <hr class="ind-hr-format">
         <div id="gameBody" class="game-flag-panel ">
-            <span class="game-head txt-nonphotoblue">"Flag-It!"</span>
-            <br>
             <img src="assets/img/AA-flag.jpg" width="150" height="100">
         </div>
         <hr class="ind-hr-format">
@@ -62,20 +74,19 @@
             <button data-type="answer3" class="btn btn-md btn-info mx-4 my-1" type="submit">answer3</button>
             <button data-type="answer4" class="btn btn-md btn-info mx-4 my-1" type="submit">answer4</button>
             <br>
-            <button data-type="Start" class="btn btn-md btn-danger mx-4 mt-2" id="start-game">Start Game</button>
         </div>
         <hr class="ind-hr-format">
-        <div id="gameBody" class="game-score-panel game-score-text">S
+        <div id="gameBody" class="game-score-panel game-score-text">
             <span>
-                <div class="d-inline mx-4 my-2" id="questions-asked">empty</div>
-                <div class="d-inline my-2" id="questions-total">0</div>
+                <div class="d-inline" id="questions-asked">0/</div>
+                <div class="d-inline" id="questions-total">0</div>
                 <div class="d-inline mx-4 my-2" id="questions-correct">Score_correct </div>
                 <div class="d-inline mx-4 my-2" id="questions-wrong">Score_incorrect </div>
             </span>
 
         </div>
- <hr class="ind-hr-format">
-        <div class="game-copyr-panel d-none d-sm-none d-md-none d-lg-block">
+        <hr class="ind-hr-format">
+        <div class="game-copyr-panel d-none d-sm-none d-md-none d-lg-none d-xl-block">
             <footer>
                 <img src="assets/img/AY-flag.jpg">
                 <p class="game-copyr-text">Copyright ©Megalops games @2024</p>
