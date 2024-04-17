@@ -8,6 +8,9 @@ const gameStart = document.getElementById("start-game");
 
 // set max question and write to page 
 totalQuestions.innerText = maxQuestions;
+askedQuestions.innertext = "Questions 0/"
+correctQuestions.innerText = "Correct Answer = 0" 
+wrongQuestions.innerText = "Wrong Answer = 0" 
 
 console.log("connected")
 
