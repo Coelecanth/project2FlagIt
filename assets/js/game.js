@@ -66,8 +66,8 @@ function getFlag() {
 // $('#answer1').on ( "click", function (){
 //          $('#answer1').css("background-color","green")
 //      });
-   $('#answer1').on ( "click", function (){
-        $('#answer1').addclass("green-button")
+   $('#answer1').on("click", function (){
+        $('#answer1').addClass("green-button")
     });
 
 
