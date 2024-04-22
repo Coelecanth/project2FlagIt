@@ -15,21 +15,22 @@ const gameStart = document.getElementById("start-game");
 
 // set max question and write to page 
 totalQuestions.innerText = maxQuestions;
-askedQuestions.innertext = "Questions 0/"
 correctQuestions.innerText = "Correct Answer = 0" 
 wrongQuestions.innerText = "Wrong Answer = 0" 
+askedQuestions.innertext = "Questions 0/"
 
 console.log("connected")
 
-// Wait for the DOM to finish loading before running the game startr
+// Wait for the DOM to finish loading before running the game start
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
     $(gameStart).click(initNewgame);
 });
 
 function initNewgame() {
-    // Shuffle array
+    // Shuffle array, loads the array and shuffles it  
     shuffled = countryArray.sort(() => 0.5 - Math.random());
+
     getFlag();
 }
     
@@ -47,8 +48,6 @@ function initNewgame() {
 
 
 
-// Get sub-array of first n elements after shuffled
-// let selected = shuffled.slice(0, 4);
 // console.log(selected)
 
 
@@ -58,6 +57,13 @@ function getFlag() {
     $(flagChoices).each(function(i, choice) {
         let buttonId = choice.id;
         let arrayIndex = buttonId.replace("answer", "");
+        If (currentFlag = 1) { 
+            $('#answer1').click(function (){
+                $('#answer1').addClass('green_button')
+            });
+        } else {
+
+        }
         choice.innerText = shuffled[arrayIndex].locale;
         let randomOrder = Math.floor(Math.random() * 4) + 1;
         $(choice).css("order", randomOrder);
