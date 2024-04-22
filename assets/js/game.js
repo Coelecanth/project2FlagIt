@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
 function initNewgame() {
     alert("submit pressed");
 }
-    //load countries - eg 1 x flag and 4 x country names  
+    
+
+//load countries - eg 1 x flag and 4 x country names  
     // write flag to Page 
     // write 4 x country names to asnwer 1 ,2,3,4 
     // listen for buttons answer - 
@@ -33,13 +35,27 @@ function initNewgame() {
     // compare answer to country name correct or Incorect 
     // ?? right to innerghtml green or red, incrrment scores  
     //   
+    let arr = ["GFG_1", "GeeksForGeeks",
+    "Geeks", "Computer Science Portal"];
+ 
+function GFG_Fun() {
+    console.log(arr[(Math.floor(Math.random() * arr.length))]);
+}
+GFG_Fun()
 
 
+/// jquery to change color of buttions on wrong 
 
-// call function to shuffle the selectedCountries
-// shuffleCountries(selectedCountries);
+$('#answer1').click(function (){
+  $('#answer1').css('.red_button')
+})
+$('#answer2').click(function (){
+    $('#answer2').css('.red_button')
+})
+$('#answer3').click(function (){
+    $('#answer3').css('.red_button')
+})
+  $('#answer4').click(function (){
+    $('#answer4').css('.red_button')
+})
 
-// function shuffleCountries(selectedCountries) {
-    // randomly shuffle the array of selectedCountries
-    //return selectedCountries.sort(() => Math.random() - 0.5);
-//}

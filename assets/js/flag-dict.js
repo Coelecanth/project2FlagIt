@@ -1,4 +1,4 @@
-const countryArray [
+const countryArray = [
   {
     "locale": "Afghanistan",
     "flagName": "AF-flag.jpg",

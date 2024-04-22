@@ -16,6 +16,19 @@
     <!--<script src="https://kit.fontawesome.com/6cf7958865.js" crossorigin="anonymous"></script>-->
 
     <title>FlagIt!- the Flags of the World Game </title>
+
+    <style>
+        /* styles for Jquery  */
+        .red_button {
+            background: red;
+        }
+
+        .grren_button {
+            background: green;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -35,8 +48,8 @@
                     <a class="txt-lavendar game-nav-head navbar-brand my-2 mx-2" href="#">Start game Here -></a>
                     <button data-type="Start" class="btn btn-sm btn-block btn-danger mx-4" id="start-game">Start
                         Game</button>
-                    <button data-type="Reset" class="btn btn-sm btn-block btn-danger mx-4" id="reset-game">Reset 
-                            Game</button>
+                    <button data-type="Reset" class="btn btn-sm btn-block btn-danger mx-4" id="reset-game">Reset
+                        Game</button>
             </div>
         </div>
         </div>
@@ -59,11 +72,15 @@
             <div class="d-none d-sm-none d-md-none d-lg-block">
                 <p>Select Your Answer Here </p>
             </div>
-            <button data-type="answer1" class="btn btn-md btn-info mx-4 my-1" type="submit">answer1</button>
+            <button data-type="answer1" id="answer1" class="btn btn-md btn-info mx-4 my-1"
+                type="submit">answer1</button>
 
-            <button data-type="answer2" class="btn btn-md btn-info mx-4 my-1" type="submit">answer2</button>
-            <button data-type="answer3" class="btn btn-md btn-info mx-4 my-1" type="submit">answer3</button>
-            <button data-type="answer4" class="btn btn-md btn-info mx-4 my-1" type="submit">answer4</button>
+            <button data-type="answer2" id="answer2" class="btn btn-md btn-info mx-4 my-1"
+                type="submit">answer2</button>
+            <button data-type="answer3" id="answer3" class="btn btn-md btn-info mx-4 my-1"
+                type="submit">answer3</button>
+            <button data-type="answer4" id="answer4" class="btn btn-md btn-info mx-4 my-1"
+                type="submit">answer4</button>
             <br>
         </div>
         <hr class="ind-hr-format">
