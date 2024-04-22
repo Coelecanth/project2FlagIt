@@ -28,12 +28,12 @@
 
 
 /* styles for Jquery  */
-.red_button {
-    background: red;
+.red-button {
+    background-color: red;
 }
 
-.grren_button {
-    background: green;
+.green-button {
+    background-color: green;
 }
 
 body {

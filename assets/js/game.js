@@ -17,7 +17,7 @@ const gameStart = document.getElementById("start-game");
 totalQuestions.innerText = maxQuestions;
 correctQuestions.innerText = "Correct Answer = 0" 
 wrongQuestions.innerText = "Wrong Answer = 0" 
-askedQuestions.innertext = "Questions 0/"
+askedQuestions.innerText = "Questions 0/"
 
 console.log("connected")
 
@@ -47,43 +47,42 @@ function initNewgame() {
     //   
 
 
-
-// console.log(selected)
-
-
 function getFlag() {
 
     $(flagImage).attr("src", `assets/img/${shuffled[currentFlag].flagName}`);
     $(flagChoices).each(function(i, choice) {
+        console.log(choice)
         let buttonId = choice.id;
+        console.log(choice.id)
+        
         let arrayIndex = buttonId.replace("answer", "");
-        If (currentFlag = 1) { 
-            $('#answer1').click(function (){
-                $('#answer1').addClass('green_button')
-            });
-        } else {
-
-        }
         choice.innerText = shuffled[arrayIndex].locale;
         let randomOrder = Math.floor(Math.random() * 4) + 1;
         $(choice).css("order", randomOrder);
+  
     });
 };
 
+// $('#answer1').on ( "click", function (){
+//          $('#answer1').css("background-color","green")
+//      });
+   $('#answer1').on ( "click", function (){
+        $('#answer1').addclass("green-button")
+    });
 
 
-/// jquery to change color of buttions on wrong 
+// /// jquery to change color of buttions on wrong 
+// $('#answer1').click(function (){
+//     $('#answer1').addClass('green_button')
+// });
 
-$('#answer1').click(function (){
-  $('#answer1').addClass('red_button')
-});
-$('#answer2').click(function (){
-    $('#answer2').addClass('red_button')
-});
-$('#answer3').click(function (){
-    $('#answer3').addClass('red_button')
-});
-  $('#answer4').click(function (){
-    $('#answer4').addClass('red_button')
-});
+// $('#answer2').click(function (){
+//     $('#answer2').addClass('red_button')
+// });
+// $('#answer3').click(function (){
+//     $('#answer3').addClass('red_button')
+// });
+//   $('#answer4').click(function (){
+//     $('#answer4').addClass('red_button')
+// });
 
