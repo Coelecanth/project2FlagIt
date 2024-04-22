@@ -55,18 +55,3 @@
         //             document.getElementById("incorrect").innerText = ++oldScore;
         //         } 
 
-
-        (function($) {
-              $.rand = function(arg) {
-                  if ($.isArray(arg)) {
-                      return arg[$.rand(arg.length)];
-                  } else if (typeof arg === "number") {
-                      return Math.floor(Math.random() * arg);
-                  } else {
-                      return 4;  // chosen by fair dice roll
-                  }
-              };
-          })(jQuery);
-          
-          var items = [523, 3452, 334, 31, ..., 5346];
-          var item = jQuery.rand(items);

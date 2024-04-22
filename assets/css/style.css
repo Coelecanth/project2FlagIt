@@ -26,6 +26,16 @@
     color: #8edce6;
 }
 
+
+/* styles for Jquery  */
+.red_button {
+    background: red;
+}
+
+.grren_button {
+    background: green;
+}
+
 body {
     background-color: #443627;
 }
@@ -343,6 +353,7 @@ hr.ind-hr-format {
 }
 
 .game-ans-text {
+    display: grid;
     font-size: 1em;
     font-family: "Roboto Slab";
     font-weight: 300;
