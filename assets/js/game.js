@@ -28,7 +28,7 @@ console.log("connected")
 // Wait for the DOM to finish loading before running the game start
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
-    $(gameStart).click(initNewgame);
+    $("#start-game").click(initNewgame);
 });
 
 function initNewgame() {
@@ -52,27 +52,36 @@ function getFlag() {
 };
 
    $('#answer1').on("click", function (){
-        $('#answer1').html(`CORRECT`)
+        $('#answer1').html(`<h3>CORRECT</h3>`)
         //console.log ("type is " + typeof correctQuestions.innerText)
         correctQuestions.innerText = parseInt(correctQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
-        // initNewgame()
+        callNxtbutton()
     });
     $('#answer2').on("click", function (){
-        $('#answer2').html(`WRONG`)
+        $('#answer2').html(`<h3>WRONG</h3>`)
         wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
-        // initNewgame()
+        callNxtbutton()
     });
     $('#answer3').on("click", function (){
-        $('#answer3').html(`WRONG`)
-        wrongQuestions.innerText =  parseint(wrongQuestions.innerText) + 1;
-        askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
-        // initNewgame()       
-    });
-    $('#answer4').on("click", function (){
-        $('#answer4').html(`WRONG`)
+        $('#answer3').html(`<h3>WRONG</h3>`)
         wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
-        // initNewgame()
+        callNxtbutton()      
     });
+    $('#answer4').on("click", function (){
+        $('#answer4').html(`<h3>WRONG</h3>`)
+        wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
+        askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
+        callNxtbutton()
+    });
+
+
+    function callNxtbutton() {
+        // call listener for Next Buttton   
+        $('#next-button').on("click", function (){
+            initNewgame()
+        });   
+    
+    }

@@ -26,16 +26,6 @@
     color: #8edce6;
 }
 
-
-/* styles for Jquery  */
-.red-button {
-    background-color: red;
-}
-
-.green-button {
-    background-color: green;
-}
-
 body {
     background-color: #443627;
 }
@@ -54,7 +44,10 @@ div footer img {
     height: auto;
 
 }
-
+.img-game {
+    max-width: 150px;
+    max-height: 100px;
+}
 
 /* stf formatting and styles  */
 .stf-head {
