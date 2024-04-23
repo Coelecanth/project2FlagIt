@@ -58,30 +58,35 @@
 
         <div id="gameBody" class="game-ans-panel game-ans-text">
             <div class="d-none d-sm-none d-md-none d-lg-block">
-                <p>Select Your Answer Here </p>
+                Select Your Answer Here
             </div>
-            <button id="answer1" class="btn btn-md btn-info mx-4 my-1 flag-choice" type="button"> &nbsp;</button>
-            <button id="answer2" class="btn btn-md btn-info mx-4 my-1 flag-choice" type="button"> &nbsp;</button>
-            <button id="answer3" class="btn btn-md btn-info mx-4 my-1 flag-choice" type="button"> &nbsp;</button>
-            <button id="answer4" class="btn btn-md btn-info mx-4 my-1 flag-choice" type="button"> &nbsp;</button>
+            <button id="answer1" class="btn btn-md btn-info mx-4 my-2 flag-choice" type="button"> &nbsp;</button>
+            <button id="answer2" class="btn btn-md btn-info mx-4 my-2 flag-choice" type="button"> &nbsp;</button>
+            <button id="answer3" class="btn btn-md btn-info mx-4 my-2 flag-choice" type="button"> &nbsp;</button>
+            <button id="answer4" class="btn btn-md btn-info mx-4 my-2 flag-choice" type="button"> &nbsp;</button>
             <br>
         </div>
         <hr class="ind-hr-format">
         <div id="gameBody" class="game-score-panel game-score-text">
-            <span>
-                <div class="d-inline" id="questions-asked">""/</div>
-                <div class="d-inline" id="questions-total">""</div>
-                <div class="d-inline mx-4 my-2" id="questions-correct">Score_correct </div>
-                <div class="d-inline mx-4 my-2" id="questions-wrong">Score_incorrect </div>
-            </span>
+            <div class="container" id="questions-asked-text">
+                <div class="row">
+                    <div class="col">
+                        <p>Questions Asked </p>
+                        <div class="d-inline ml-4" id="questions-asked">&nbsp</div>
+                        <div class="d-inline mr-4" id="questions-total">&nbsp</div>
+                    </div>
 
-        </div>
-        <hr class="ind-hr-format">
-        <div class="game-copyr-panel d-none d-sm-none d-md-none d-lg-none d-xl-block">
-            <footer>
-                <img src="assets/img/AY-flag.jpg">
-                <p class="game-copyr-text">Copyright ©Megalops games @2024</p>
-            </footer>
+                    <div class="col">
+                        <p>Correct Answer</p>
+                        <div class="d-inline mx-4" id="questions-correct">&nbsp </div>
+                    </div>
+                    <div class="col">
+                        <p>Wrong Answer</p>       
+                        <div class="d-inline mx-4 game-sc-r-panel-text" id="questions-wrong">&nbsp </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

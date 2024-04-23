@@ -1,6 +1,10 @@
 /* jshint esversion: 11, jquery: true */
 let shuffled;
 let maxQuestions = 25;
+let intialCorrect = 0;
+let intialWrong = 0;
+let intialAsked = 0;
+
 let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
 let currentFlag = 1;
@@ -14,10 +18,10 @@ const gameStart = document.getElementById("start-game");
 
 
 // set max question and write to page 
-totalQuestions.innerText = maxQuestions;
-correctQuestions.innerText = "Correct Answer = 0" 
-wrongQuestions.innerText = "Wrong Answer = 0" 
-askedQuestions.innerText = "Questions 0/"
+totalQuestions.innerText = "/" + maxQuestions;
+correctQuestions.innerText = intialCorrect
+wrongQuestions.innerText = intialWrong 
+askedQuestions.innerText = intialAsked
 
 console.log("connected")
 
@@ -33,28 +37,12 @@ function initNewgame() {
 
     getFlag();
 }
-    
-
-//load countries - eg 1 x flag and 4 x country names  
-    // write flag to Page 
-    // write 4 x country names to asnwer 1 ,2,3,4 
-    // listen for buttons answer - 
-    
-    // retrieve country name e.g read inner html)
-    
-    // compare answer to country name correct or Incorect 
-    // ?? right to innerghtml green or red, incrrment scores  
-    //   
-
 
 function getFlag() {
 
     $(flagImage).attr("src", `assets/img/${shuffled[currentFlag].flagName}`);
     $(flagChoices).each(function(i, choice) {
-        console.log(choice)
         let buttonId = choice.id;
-        console.log(choice.id)
-        
         let arrayIndex = buttonId.replace("answer", "");
         choice.innerText = shuffled[arrayIndex].locale;
         let randomOrder = Math.floor(Math.random() * 4) + 1;
@@ -63,26 +51,28 @@ function getFlag() {
     });
 };
 
-// $('#answer1').on ( "click", function (){
-//          $('#answer1').css("background-color","green")
-//      });
    $('#answer1').on("click", function (){
-        $('#answer1').addClass("green-button")
+        $('#answer1').html(`CORRECT`)
+        //console.log ("type is " + typeof correctQuestions.innerText)
+        correctQuestions.innerText = parseInt(correctQuestions.innerText) + 1;
+        askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
+        // initNewgame()
     });
-
-
-// /// jquery to change color of buttions on wrong 
-// $('#answer1').click(function (){
-//     $('#answer1').addClass('green_button')
-// });
-
-// $('#answer2').click(function (){
-//     $('#answer2').addClass('red_button')
-// });
-// $('#answer3').click(function (){
-//     $('#answer3').addClass('red_button')
-// });
-//   $('#answer4').click(function (){
-//     $('#answer4').addClass('red_button')
-// });
-
+    $('#answer2').on("click", function (){
+        $('#answer2').html(`WRONG`)
+        wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
+        askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
+        // initNewgame()
+    });
+    $('#answer3').on("click", function (){
+        $('#answer3').html(`WRONG`)
+        wrongQuestions.innerText =  parseint(wrongQuestions.innerText) + 1;
+        askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
+        // initNewgame()       
+    });
+    $('#answer4').on("click", function (){
+        $('#answer4').html(`WRONG`)
+        wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
+        askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
+        // initNewgame()
+    });
