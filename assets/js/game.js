@@ -1,6 +1,7 @@
 /* jshint esversion: 11, jquery: true */
 let shuffled;
-let maxQuestions = 25;
+let sumQuestions;
+let maxQuestions = 4;
 let intialCorrect = 0;
 let intialWrong = 0;
 let intialAsked = 0;
@@ -18,7 +19,7 @@ const gameStart = document.getElementById("start-game");
 
 
 // set max question and write to page 
-totalQuestions.innerText = "/" + maxQuestions;
+totalQuestions.innerText =  maxQuestions;
 correctQuestions.innerText = intialCorrect
 wrongQuestions.innerText = intialWrong 
 askedQuestions.innerText = intialAsked
@@ -51,37 +52,70 @@ function getFlag() {
     });
 };
 
-   $('#answer1').on("click", function (){
-        $('#answer1').html(`<h3>CORRECT</h3>`)
-        //console.log ("type is " + typeof correctQuestions.innerText)
+   $('#answer1').on("click", function () {
+        $('#answer1').html(`<h3>CORRECT</h3>`);
+        $('#answer2').prop('disabled', true);
+        $('#answer3').prop('disabled', true);
+        $('#answer4').prop('disabled', true);
         correctQuestions.innerText = parseInt(correctQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
         callNxtbutton()
     });
-    $('#answer2').on("click", function (){
-        $('#answer2').html(`<h3>WRONG</h3>`)
+    $('#answer2').on("click", function () {
+        $('#answer2').html(`<h3>WRONG</h3>`);
+        $('#answer1').prop('disabled', true);
+        $('#answer3').prop('disabled', true);
+        $('#answer4').prop('disabled', true);
         wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
         callNxtbutton()
     });
-    $('#answer3').on("click", function (){
-        $('#answer3').html(`<h3>WRONG</h3>`)
+    $('#answer3').on("click", function () {
+        $('#answer3').html(`<h3>WRONG</h3>`);
+        $('#answer2').prop('disabled', true);
+        $('#answer1').prop('disabled', true);
+        $('#answer4').prop('disabled', true);
         wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
         callNxtbutton()      
     });
-    $('#answer4').on("click", function (){
-        $('#answer4').html(`<h3>WRONG</h3>`)
-        wrongQuestions.innerText =  parseInt(wrongQuestions.innerText) + 1;
+    $('#answer4').on("click", function () {
+        $('#answer4').html(`<h3>WRONG</h3>`);
+        $('#answer1').prop('disabled', true);
+        $('#answer3').prop('disabled', true);
+        $('#answer4').prop('disabled', true);
+        wrongQuestions.innerText = parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
         callNxtbutton()
     });
 
+    function resetState() {
+        // reset button states and calculate  
+        $('#next-button').prop('disabled', false);
+        
+        initNewgame()
+    }
 
     function callNxtbutton() {
-        // call listener for Next Buttton   
-        $('#next-button').on("click", function (){
-            initNewgame()
-        });   
-    
-    }
+    // call listener for Next Buttton   
+        $('#next-button').on("click", function () {
+            $('#answer1').prop('disabled', false);
+            $('#answer2').prop('disabled', false);
+            $('#answer3').prop('disabled', false);
+            $('#answer4').prop('disabled', false);
+            $('#next-button').prop('disabled', true);
+        });
+            sumQuestions = parseInt(correctQuestions.innerText,10) + parseInt(wrongQuestions.innerText,10);
+            // console.log("Max Q " + maxQuestions);
+            // console.log("Corr Q " + correctQuestions.innerText);
+            // console.log("Wrong Q " + wrongQuestions.innerText);
+            // console.log(sumQuestions);
+             
+            if (maxQuestions == sumQuestions) {
+               console.log("exit = true") 
+               return 
+              }
+            
+            resetState()
+            
+    };
