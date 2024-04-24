@@ -130,7 +130,11 @@ div footer img {
     font-size: 0.5em
 }
 
-/* index panel and text styles  */
+/* index page and text styles  */
+.ind-img-game {
+    max-width: 225px;
+    max-height: 150px;
+}
 .ind-head {
     font-family: 'Economica';
     font-size: 2em;
