@@ -71,6 +71,7 @@ $(".flag-choice").on("click", function () {
     } else {
         //all other answer are therefore incorrect 
         $("#" + idButton).html(`<h3>Wrong</h3>`)
+        $('#answer1').addClass('btn-success').removeClass('btn-info');
         wrongQuestions.innerText = parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
     }
@@ -81,7 +82,7 @@ $(".flag-choice").on("click", function () {
     $('#answer3').prop('disabled', true);
     $('#answer4').prop('disabled', true);
     $('#next-button').prop('disabled', false);
-
+    
     // check to see if we have played max questions 
     sumQuestions = parseInt(correctQuestions.innerText, 10) + parseInt(wrongQuestions.innerText, 10);
        //game end modal scores 
@@ -103,6 +104,8 @@ function resetState() {
     $('#answer2').prop('disabled', false);
     $('#answer3').prop('disabled', false);
     $('#answer4').prop('disabled', false);
+    $('#answer1').addClass('btn-info').removeClass('btn-success');
+
     // disable next button
     $('#next-button').prop('disabled', true);
     // call game start 
@@ -115,10 +118,6 @@ function resetGame () {
     $(".flag-choice").html("&nbsp")
     $('.flag-choice').prop('disabled', false);
     $("#GameEndModal").modal('show');
-    //game end modal scores 
-    // $("#c-score").text(correctQuestions.innerText)
-    // $("#w-score").text(wrongQuestions.innerText)
-    // $("#t-score").text(maxQuestions)
     resetScore()
 }
     
