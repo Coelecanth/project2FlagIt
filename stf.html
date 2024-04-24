@@ -28,12 +28,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="container-fluid">
-
+                <div class="container-fluid">
                     <a class="btn btn-info btn-block btn-md" type="button" href="index.html" role="button">Home</a>
                     <a class="btn btn-info btn-block btn-md" type="button" href="htp.html" role="button">How to Play</a>
-                    <a class="btn btn-info btn-block btn-md" type="button" href="game.html" role="button">Game</a>
-                </form>
+                    <a class="btn btn-info btn-block btn-md disabled" type="button" href="stf.html" role="button">Study Flags</a> 
+                    <a class="btn btn-info btn-block btn-md" type="button" href="game.html" role="button">Game</a>   
+                </div>
 
             </div>
         </div>
@@ -41,23 +41,28 @@
     <div class="stf-wrap-banner-panel">
         <div id="gameBody" class="stf-banner">
             <span class="stf-head txt-nonphotoblue">"Flag-It!"</span>
-
-
         </div>
         <hr class="ind-hr-format">
         <div id="gameBody" id="study-container" class="stf-flagpanel">
-            <span class="stf-sub-head txt-lavendar">Flag-It! - Study flags here</span>
+            <span class="stf-sub-head txt-lavendar">Flag-It! - Study the worlds flags here!</span>
             <br>
-            <!--- modal button-->
-            <span><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button>
-            </span>
-
+            <button type="button" class="btn btn-info" id="load-flags">Load flags</button> 
         </div>
         <hr class="ind-hr-format">
-
-        <div class="stf-copyr-panel">
+        <div id="gameBody" class="container game-flag-panel">
+            <div class="row">
+                <div class="col">
+                    <img src="assets/img/start-game.jpg" alt="country flag image" id="targ-flag" class="stf-img-game">
+                </div>
+            </div>
+        </div>
+        <hr class="ind-hr-format">
+        <div id="gameBody" class="game-ans-panel game-ans-text">
+            <!-- country name  added in here -->
+            <p id="answer1" class="mx-4 my-1 flag-choice stf-country-head" type="button"> &nbsp;</p>
+        </div>
+        <hr class="ind-hr-format">
+       <div class="stf-copyr-panel">
             <footer>
                 <img src="assets/img/AY-flag.jpg">
                 <p class="stf-copyr-text">Copyright ©Megalops games @2024</p>
@@ -87,10 +92,13 @@
     </div>
 
     <!-- <script src="assets/js/assets/js/flag-dict.js"></script> -->
-    <script src="assets/js/stf.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    <script src="assets/js/flag-dict.js"></script>
+    <script src="assets/js/stf.js"></script>
 </body>
 
 </html>

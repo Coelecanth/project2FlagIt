@@ -50,6 +50,18 @@ div footer img {
 }
 
 /* stf formatting and styles  */
+
+.stf-img-game {
+    max-width: 225px;
+    max-height: 150px;
+}
+.stf-country-head {
+    font-family: 'Josefin Slab';
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+}
+
 .stf-head {
     font-family: 'Economica';
     font-size: 2em;
