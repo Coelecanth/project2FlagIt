@@ -33,6 +33,8 @@ console.log("connected")
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
     $("#start-game").click(initNewgame);
+    // disable start button - only reset 
+   //  $('#start-game').prop('disabled', true);
 });
 
 function initNewgame() {
@@ -50,6 +52,7 @@ function getFlag() {
         choice.innerText = shuffled[arrayIndex].locale;
         let randomOrder = Math.floor(Math.random() * 4) + 1;
         $(choice).css("order", randomOrder);
+        $('#start-game').prop('disabled', true);
     });
 };
 
@@ -82,6 +85,7 @@ $(".flag-choice").on("click", function () {
     $('#answer3').prop('disabled', true);
     $('#answer4').prop('disabled', true);
     $('#next-button').prop('disabled', false);
+    $('#start-game').prop('disabled', true);
     
     // check to see if we have played max questions 
     sumQuestions = parseInt(correctQuestions.innerText, 10) + parseInt(wrongQuestions.innerText, 10);
@@ -108,6 +112,7 @@ function resetState() {
 
     // disable next button
     $('#next-button').prop('disabled', true);
+    $('#start-game').prop('disabled', false);
     // call game start 
     initNewgame()
     });
@@ -117,7 +122,13 @@ function resetGame () {
     $("#targ-flag").attr('src','assets/img/start-game.jpg');
     $(".flag-choice").html("&nbsp")
     $('.flag-choice').prop('disabled', false);
+    // enable start button - for new game  
+    $('#start-game').prop('disabled', false);
+    // remove green button after last answer is wrong 
+    $('#answer1').addClass('btn-info').removeClass('btn-success');
+    // show modal with game summary
     $("#GameEndModal").modal('show');
+    // zero scores for next game
     resetScore()
 }
     

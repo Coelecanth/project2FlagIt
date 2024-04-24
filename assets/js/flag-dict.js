@@ -125,7 +125,7 @@ const countryArray = [
     "territory": "Asia"
   },
   {
-    "locale": "Boliivia",
+    "locale": "Bolivia",
     "flagName": "BL-flag.jpg",
     "territory": "Americas"
   },
@@ -500,7 +500,7 @@ const countryArray = [
     "territory": "Asia"
   },
   {
-    "locale": "iran",
+    "locale": "Iran",
     "flagName": "IR-flag.jpg",
     "territory": "Asia"
   },
@@ -535,7 +535,7 @@ const countryArray = [
     "territory": "Americas"
   },
   {
-    "locale": "japan",
+    "locale": "Japan",
     "flagName": "JA-flag.jpg",
     "territory": "Asia"
   },
@@ -1140,7 +1140,7 @@ const countryArray = [
     "territory": "Asia"
   },
   {
-    "locale": "Virgin Islands",
+    "locale": "U.S. Virgin Islands",
     "flagName": "VQ-flag.jpg",
     "territory": "Americas"
   },
