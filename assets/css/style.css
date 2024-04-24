@@ -64,14 +64,6 @@ div footer img {
     font-style: normal;
 }
 
-.stf-modal-format {
-    text-align: center;
-    font-family: 'Josefin Slab';
-    font-size: 1.5em;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .stf-wrap-banner-panel {
     top: 10%;
     width: 70%;
@@ -278,6 +270,21 @@ hr.ind-hr-format {
 }
 
 /* ==============gamepage  formatting styles===========  */
+.game-button {
+    width: 100px;
+}
+.game-modal-format {
+    background-color: #725e54;
+
+}
+.game-mod-text {
+    color: #d5dcf9;
+    text-align: left;
+    font-family: 'Josefin Slab';
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .game-head {
     font-family: 'Economica';
