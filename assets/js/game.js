@@ -6,6 +6,8 @@ let maxQuestions = 4;
 let intialCorrect = 0;
 let intialWrong = 0;
 let intialAsked = 0;
+let pVal;
+let pNew;
 
 let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
@@ -36,14 +38,27 @@ $(document).ready(function () {
     $("#game-over-mess").hide();
     $("#next-button").hide();
     $("#reset-game").hide();
-    $("#gameoptions").on('show.bs.modal', function () {
-        getValmodal()
-    });
     $("#start-game").click(initNewgame);
 
 });
 
 
+$("#submit-data").on("click", function() {
+RunModal()
+});
+
+function RunModal() {
+    
+        // Get the form element - whre myform is the form id
+        const pVal = document.getElementById("inputQuestNum");
+        pNew = pVal.innerHTML 
+        console.log(pNew);
+   
+        // getting the value from the form for questions
+        maxQuestions = pNew
+        console.log(maxQuestions);
+        console.log("hit exit of click  modal");
+}
 
 function initNewgame() {
     // show next and reset tbutton after start button pressed 
@@ -160,10 +175,3 @@ function resetGame() {
     $('#game-options').prop('disabled', false);
 }
 
-function getValmodal() {
-    console.log("hit getval modal")
-    // getting the value from the form for questions
-       maxQuestions = $("#inputQuestNum").val();
-       console.log(maxQuestions)
-      totalQuestions.innerText = maxQuestions
-}
