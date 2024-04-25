@@ -301,7 +301,19 @@ hr.ind-hr-format {
     font-weight: 400;
     font-style: normal;
 }
+.game-options-text {
+    color: #d5dcf9;
+    text-align: left;
+    font-family: 'Josefin Slab';
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
 
+.game-form-text {
+    color: #443627;
+    font-weight: bold;
+}
 .game-head {
     font-family: 'Economica';
     font-size: 2em;

@@ -33,13 +33,14 @@ console.log("connected")
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
     $("#start-game").click(initNewgame);
-    // disable start button - only reset 
-   //  $('#start-game').prop('disabled', true);
+        
 });
 
 function initNewgame() {
     // Shuffle array, loads the array and shuffles it  
     shuffled = countryArray.sort(() => 0.5 - Math.random());
+    // disable game options button 
+    $('#game-options').prop('disabled', true);
     getFlag();
 }
 
@@ -130,6 +131,8 @@ function resetGame () {
     $("#GameEndModal").modal('show');
     // zero scores for next game
     resetScore()
+    //enables game options after game end 
+    //$('#game-options').prop('disabled', false);
 }
     
 
