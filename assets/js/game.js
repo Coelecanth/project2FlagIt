@@ -36,6 +36,9 @@ $(document).ready(function () {
     $("#game-over-mess").hide();
     $("#next-button").hide();
     $("#reset-game").hide();
+    $("#gameoptions").on('show.bs.modal', function () {
+        getValmodal()
+    });
     $("#start-game").click(initNewgame);
 
 });
@@ -155,4 +158,12 @@ function resetGame() {
     resetScore()
     // enables game options after game end 
     $('#game-options').prop('disabled', false);
+}
+
+function getValmodal() {
+    console.log("hit getval modal")
+    // getting the value from the form for questions
+       maxQuestions = $("#inputQuestNum").val();
+       console.log(maxQuestions)
+      totalQuestions.innerText = maxQuestions
 }
