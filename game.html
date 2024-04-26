@@ -36,14 +36,15 @@
                     <a class="btn btn-info btn-block btn-sm disabled" type="button" href="game.html"
                         role="button">Game</a>
                     <button class="btn btn-secondary btn-block btn-sm mx-4" data-bs-toggle="modal"
-                        data-bs-target="#gameOptions" id="game-options" type="button" role="button">Game Options</button>
+                        data-bs-target="#gameOptions" id="game-options" type="button" role="button">Game
+                        Options</button>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- Game header panel -->
+    <!-- Game panels -->
     <div class="game-wrap-banner-panel">
-        
+        <!-- Game header panel -->
         <div id="gameBody" class="game-banner">
             <span class="game-head txt-nonphotoblue">"Flag-It!"</span>
             <div class="txt-lavendar game-sub-head d.none d-lg-block ">
@@ -57,10 +58,15 @@
                 <div class="col">
                     <button class="btn btn-sm btn-block btn-success game-button my-3 mx-2"
                         id="next-button">Next</button>
+                        <div class="txt-lavendar game-type-text">
+                            <span class="ps-game" >You are playing game</span><br>
+                            <span class="ps-game" id="flag-game-type">&nbsp;</span>
+                        </div>                        
+
                 </div>
                 <div class="col">
                     <img src="assets/img/start-game-new.avif" id="targ-flag" class="img-game">
-                    <p class="game-head" id="game-over-mess">Game Over!</p>
+                    <p class="game-head-end" id="game-over-mess">Game Over!</p>
                 </div>
                 <div class="col">
                     <button class="btn btn-sm btn-block btn-danger game-button my-3 mx-2" id="start-game">Start
@@ -82,7 +88,7 @@
             <button id="answer4" class="btn btn-md btn-info mx-4 my-1 flag-choice" type="button"> &nbsp;</button>
 
         </div>
-       <!-- game score panel -->
+        <!-- game score panel -->
         <hr class="ind-hr-format">
         <div id="gameBody" class="game-score-panel game-score-text">
             <div class="container" id="questions-asked-text">
@@ -130,50 +136,51 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header game-modal-format">
-                    <h1 class="modal-title fs-5 game-mod-text" id="headModalLabel">Game Options</h1>
+                    <h1 class="modal-title fs-3 game-mod-text" id="headModalLabel">Game Options</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body game-options-text game-modal-format">
-                    <div class="mb-5">
-                    <form id="form-data">
-                        <label class="form-label">Number of Questions</label>
-                        <input class="form control-md game-form-text" value="25" min="5" max="240" type="number" id="inputQuestNum" aria-describedby="gHelp">
-                        <div id="gHelp" class="form-text game-options-text">Enter the Number of questions per game.</div>
-                    </form>
+                <div class="modal-body game-modal-format">
+                    <p class="game-mod-text">How many Questions do you want per game? </p>
+                    <div class="game-mod-btn-text">
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3" id="5" type="button" role="button">
+                            5</button>
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3 ms-5" id="10" type="button" role="button">
+                            10</button>
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3 mx-5" id="25" type="button" role="button">
+                            25</button>
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3" id="50" type="button" role="button">
+                            50</button>
                     </div>
+                    <hr>
+                    <p class="game-mod-text">Game Type - Which regions Flags?</p>
+                    <div class="text-center game-mod-btn-text">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="All" type="button"
+                            role="button">
+                            All Flags</button>
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2 mx-2" id="Africa" type="button"
+                            role="button">
+                            Africa Flags</button>
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="Americas" type="button"
+                            role="button">
+                            Americas Flags</button>
+                    </div>
+                    <div class="text-center game-mod-btn-text">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="Asia" type="button"
+                            role="button">
+                            Asia Flags</button>
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2 ms-2" id="Oceania" type="button"
+                            role="button">
+                            Oceania Flags</button>
+                    </div>
+                </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioBtn1" id="radioBtn1" checked>
-                        <label class="form-check-label">All Flags</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioBtn2" id="radioBtn2">
-                        <label class="form-check-label">Africa flags</label>
-                    </div>
+                <div class="modal-footer game-modal-format">
+                    <button type="button" class="btn btn-info" id="submit-close" data-bs-dismiss="modal">Close</button>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioBtn3" id="radioBtn3">
-                        <label class="form-check-label">Americas flags</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioBtn4" id="radioBtn4">
-                        <label class="form-check-label">Asia flags</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioBtn5" id="radioBtn5">
-                        <label class="form-check-label">Oceania flags</label>
-                    </div>
                 </div>
             </div>
 
-            <div class="modal-footer game-modal-format">
-                <button type="button" class="btn btn-info" id="submit-close" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-info" id="submit-data">Save changes</button>
-            </div>
         </div>
-
-    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

@@ -301,11 +301,33 @@ hr.ind-hr-format {
     font-weight: 400;
     font-style: normal;
 }
+.game-mod-btn-text {
+    color: #d5dcf9;
+    text-align: center;
+    font-family: 'Josefin Slab';
+    font-weight: 400;
+    font-style: normal;
+}
 .game-options-text {
     color: #d5dcf9;
     text-align: left;
     font-family: 'Josefin Slab';
     font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+.game-type-text {
+    color: #d5dcf9;
+    font-family: 'Josefin Slab';
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+.game-modal-q-text {
+    color: #d5dcf9;
+    text-align: left;
+    font-family: 'Josefin Slab';
+    font-size: 0.75em;
     font-weight: 400;
     font-style: normal;
 }
@@ -317,6 +339,12 @@ hr.ind-hr-format {
 .game-head {
     font-family: 'Economica';
     font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+}
+.game-head-end {
+    font-family: 'Economica';
+    font-size: 3em;
     font-weight: 700;
     font-style: normal;
 }

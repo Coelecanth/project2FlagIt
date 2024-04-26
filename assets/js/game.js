@@ -2,12 +2,13 @@
 let shuffled;
 let sumQuestions;
 var idButton;
-let maxQuestions = 4;
+let maxQuestions = 10;
 let intialCorrect = 0;
 let intialWrong = 0;
 let intialAsked = 0;
 let pVal;
 let pNew;
+let gameFilter;
 
 let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
@@ -30,47 +31,78 @@ function resetScore() {
     wrongQuestions.innerText = intialWrong
     askedQuestions.innerText = intialAsked
 }
-
-
 // Wait for the DOM to finish loading before running the game start
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
     $("#game-over-mess").hide();
     $("#next-button").hide();
     $("#reset-game").hide();
-    $("#start-game").click(initNewgame);
+    //hides game type being played
+    $(".ps-game").hide();
+    $("#start-game").on("click", function () {
+    // reset value in end of game modal - 
+    // if game has been played before scores need to be cleared down 
+    $("#t-score").text("No Scores Available")
+    $("#c-score").text("No Scores Available")
+    $("#w-score").text("No Scores Available")
+        initNewgame()
+    });
 
 });
+// modal on click functions for game options 
+//change number of questions for each game
+modChgQ()
+function modChgQ() {
+    $('.q-class').on("click", function () {
+        maxQuestions = (this.id);
+        totalQuestions.innerText = (this.id);
 
+    });
+}
+//change game type is eg flags by region
+modChgFg()
+function modChgFg() {
+    $('.f-class').on("click", function () {
+        gameFilter = (this.id);
+        console.log(gameFilter)
+        if (gameFilter != "All") {
+            arrFilter(gameFilter)
+        }
+        $(".ps-game").show();
+        $("#" + "flag-game-type").html(`Flags`)
+    });
 
-$("#submit-data").on("click", function() {
-RunModal()
-});
-
-function RunModal() {
-    
-        // Get the form element - whre myform is the form id
-        const pVal = document.getElementById("inputQuestNum");
-        pNew = pVal.innerHTML 
-        console.log(pNew);
-   
-        // getting the value from the form for questions
-        maxQuestions = pNew
-        console.log(maxQuestions);
-        console.log("hit exit of click  modal");
+    // do nothing if equal to all, and end function
 }
 
 function initNewgame() {
+    
     // show next and reset tbutton after start button pressed 
     $("#game-over-mess").hide();
     $("#next-button").show();
     $("#reset-game").show();
     // Shuffle array, loads the array and shuffles it  
     shuffled = countryArray.sort(() => 0.5 - Math.random());
+
+
     // disable game options button 
     $('#game-options').prop('disabled', true);
+    //enable all answer buttons, post reset 
+    $(".flag-choice").prop('disabled', false);
     getFlag();
 }
+
+function arrFilter(idRegion) {
+    let filteredArr = [];
+    for (let i = 0; i < shuffled.length; i++) {
+        if (shuffled[i].territory === idRegion) {
+            filteredArr = [...filteredArr, shuffled[i]];
+        }
+    }
+    console.log(filteredArr);
+}
+
+
 
 function getFlag() {
 
@@ -78,6 +110,7 @@ function getFlag() {
     $(flagChoices).each(function (i, choice) {
         let buttonId = choice.id;
         let arrayIndex = buttonId.replace("answer", "");
+        // locale is the country field name from the dictionary 
         choice.innerText = shuffled[arrayIndex].locale;
         let randomOrder = Math.floor(Math.random() * 4) + 1;
         $(choice).css("order", randomOrder);
@@ -87,7 +120,8 @@ function getFlag() {
 
 // listen for reset game click of 
 $("#reset-game").on("click", function () {
-    resetGame()
+    // zero scores for next game
+   resetGame()
 });
 
 // listen for click of all answer buttons
@@ -121,17 +155,14 @@ $(".flag-choice").on("click", function () {
     //game end modal scores 
 
     $("#t-score").text("Total Answered  " + sumQuestions)
-     
+
     if (maxQuestions == sumQuestions) {
         $("#game-over-mess").show();
-        console.log("exit = true")
         $("#next-button").hide();
-         return setTimeout(resetGame, 2500); 
-     }
+        return setTimeout(resetGame, 2500);
+    }
     $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
     $("#w-score").text("Wrong answers  " + wrongQuestions.innerText)
-   
-                   
     resetState()
 });
 
@@ -148,6 +179,7 @@ function resetState() {
         // disable next button
         $('#next-button').prop('disabled', true);
         $('#start-game').prop('disabled', false);
+        
         // call game start 
         initNewgame()
     });
@@ -165,13 +197,13 @@ function resetGame() {
     $('#start-game').prop('disabled', false);
     // remove green button after last answer is wrong 
     $('#answer1').addClass('btn-info').removeClass('btn-success');
-
+    //disable all answer buttons, so as to not leave game in unknown state 
+    $(".flag-choice").prop('disabled', true);
     // show modal with game summary
     $("#GameEndModal").modal('show');
     // zero scores for next game
-    
-    resetScore()
+        resetScore()
     // enables game options after game end 
     $('#game-options').prop('disabled', false);
+    
 }
-
