@@ -8,7 +8,7 @@ let intialWrong = 0;
 let intialAsked = 0;
 let pVal;
 let pNew;
-let gameFilter;
+let gameFilter = "All"
 
 let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
@@ -37,15 +37,18 @@ $(document).ready(function () {
     $("#game-over-mess").hide();
     $("#next-button").hide();
     $("#reset-game").hide();
-    //hides game type being played
+    //hides game type being played at intial load 
     $(".ps-game").hide();
+
     $("#start-game").on("click", function () {
-    // reset value in end of game modal - 
-    // if game has been played before scores need to be cleared down 
-    $("#t-score").text("No Scores Available")
-    $("#c-score").text("No Scores Available")
-    $("#w-score").text("No Scores Available")
-        initNewgame()
+        //hides game type being played on start of game eg second game 
+        $(".ps-game").hide();
+        // reset value in end of game modal - 
+        // if game has been played before scores need to be cleared down 
+        $("#t-score").text("No Scores Available")
+        $("#c-score").text("No Scores Available")
+        $("#w-score").text("No Scores Available")
+            initNewgame()
     });
 
 });
@@ -64,27 +67,29 @@ modChgFg()
 function modChgFg() {
     $('.f-class').on("click", function () {
         gameFilter = (this.id);
-        console.log(gameFilter)
         if (gameFilter != "All") {
+            // call function to creat new arry with territory filter 
             arrFilter(gameFilter)
+            //show text with game type on page
+            $(".ps-game").show();
+            $("#" + "flag-game-type").html(gameFilter + ` Flags`)
+            
+        } else { 
+            // call initNewgame(gameFilter) 
+            // gameFilter is set to "All" when defined 
         }
-        $(".ps-game").show();
-        $("#" + "flag-game-type").html(`Flags`)
-    });
+         
 
-    // do nothing if equal to all, and end function
+    });
 }
 
 function initNewgame() {
-    
     // show next and reset tbutton after start button pressed 
     $("#game-over-mess").hide();
     $("#next-button").show();
     $("#reset-game").show();
     // Shuffle array, loads the array and shuffles it  
     shuffled = countryArray.sort(() => 0.5 - Math.random());
-
-
     // disable game options button 
     $('#game-options').prop('disabled', true);
     //enable all answer buttons, post reset 
