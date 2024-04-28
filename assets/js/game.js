@@ -160,14 +160,14 @@ $(".flag-choice").on("click", function () {
     //game end modal scores 
 
     $("#t-score").text("Total Answered  " + sumQuestions)
+    $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
+    $("#w-score").text("Wrong answers  " + wrongQuestions.innerText)
 
     if (maxQuestions == sumQuestions) {
         $("#game-over-mess").show();
         $("#next-button").hide();
         return setTimeout(resetGame, 2500);
     }
-    $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
-    $("#w-score").text("Wrong answers  " + wrongQuestions.innerText)
     resetState()
 });
 
