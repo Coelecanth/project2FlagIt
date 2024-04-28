@@ -35,7 +35,10 @@ function resetScore() {
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
     $("#game-over-mess").hide();
+    // changed this from hide as
     $("#next-button").hide();
+    $('#game-options').prop('disabled', true);
+    // $("#next-button").hide();
     $("#reset-game").hide();
     //hides game type being played at intial load 
     $(".ps-game").hide();

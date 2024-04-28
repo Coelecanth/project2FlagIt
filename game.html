@@ -47,7 +47,7 @@
         <!-- Game header panel -->
         <div id="gameBody" class="game-banner">
             <span class="game-head txt-nonphotoblue">"Flag-It!"</span>
-            <div class="txt-lavendar game-sub-head d.none d-lg-block ">
+            <div class="txt-lavendar game-sub-head d-none d-lg-none d-xl-block ">
                 Press start to play Flag-It!
             </div>
         </div>
@@ -56,19 +56,23 @@
         <div id="gameBody" class="container game-flag-panel">
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-sm btn-block btn-success game-button my-3 mx-2"
-                        id="next-button">Next</button>
+                    
                         <div class="txt-lavendar game-type-text">
                             <span class="ps-game" >You are playing game</span><br>
                             <span class="ps-game" id="flag-game-type">&nbsp;</span>
                         </div>                        
-
-                </div>
+                </div> 
+            </div>     
+            <div class="row">    
                 <div class="col">
-                    <img src="assets/img/start-game-new.avif" id="targ-flag" class="img-game">
+                    <img src="assets/img/start-game-new.avif" id="targ-flag" class="img-game img-fluid">
                     <p class="game-head-end" id="game-over-mess">Game Over!</p>
                 </div>
+            </div>
+            <div class="row">    
                 <div class="col">
+                    <button class="btn btn-sm btn-block btn-success game-button my-3 mx-2"
+                        id="next-button">Next</button>
                     <button class="btn btn-sm btn-block btn-danger game-button my-3 mx-2" id="start-game">Start
                         Game</button>
                     <button class="btn btn-sm btn-block btn-danger game-button my-3 mx-2" data-bs-toggle="modal"
