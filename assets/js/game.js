@@ -44,16 +44,16 @@ $(document).ready(function () {
     $(".ps-game").hide();
 
     $("#start-game").on("click", function () {
-        //hides game type being played on start of game eg second game 
+        //hides ps-game message of game type played on start of game eg resets message  
         $(".ps-game").hide();
-        // reset value in end of game modal - 
-        // if game has been played before scores need to be cleared down 
+        // writes to modal to clear down scores otherwise can report old scores if reset 
         $("#t-score").text("No Scores Available")
         $("#c-score").text("No Scores Available")
         $("#w-score").text("No Scores Available")
+        //hide Game Bannr to give more space on screen while game is being played 
+        $(".game-banner").hide();
             initNewgame()
     });
-
 });
 // modal on click functions for game options 
 //change number of questions for each game
@@ -213,5 +213,7 @@ function resetGame() {
         resetScore()
     // enables game options after game end 
     $('#game-options').prop('disabled', false);
+    // show banner post game 
+    $(".game-banner").show();
     
 }
