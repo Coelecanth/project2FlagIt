@@ -110,8 +110,6 @@ function arrFilter(idRegion) {
     console.log(filteredArr);
 }
 
-
-
 function getFlag() {
 
     $(flagImage).attr("src", `assets/img/${shuffled[currentFlag].flagName}`);
