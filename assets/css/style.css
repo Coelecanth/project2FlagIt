@@ -131,10 +131,10 @@ div footer img {
 }
 
 /* index page and text styles  */
-/* .ind-img-game {
+.ind-img-game {
     max-width: 228px;
     max-height: 171px;
-} */
+} 
 .ind-head {
     font-family: 'Economica';
     font-size: 2em;
