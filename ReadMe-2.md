@@ -337,8 +337,9 @@ This happens as the scores have been written to the modal page, and had not been
 
 ### 4 Game responsiveness
 
-icon in the copy right banner at smallscreen clashed with copyright 
-resolved this by hiding Icon at small screen size using bootstrap setting for small 
+Index page - icon in the copy right banner at smallscreen clashed with copyright notice  
+### Resolution
+Resolved this by hiding Icon at small screen size using bootstrap setting for small 
 
 ### 5 Game responsiveness on samll screens - main flag Image 
 ![Flag position on small screen ](/assets/readme/mis-flag.avif?raw=true "Wrong positioned flag on small screen")
