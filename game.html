@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <!-- navigation Bar -->
     <nav class="navbar fixed-top navbar-expand-lg commit navbar-dark" style="background-color: #443627;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -30,13 +31,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="container-fluid justify-content-start">
-                    <a class="btn btn-info btn-block btn-sm" type="button" href="index.html" role="button">Home</a>
-                    <a class="btn btn-info btn-block btn-sm" type="button" href="htp.html" role="button">How to Play</a>
-                    <a class="btn btn-info btn-block btn-sm" type="button" href="stf.html" role="button">Study Flags</a>
-                    <a class="btn btn-info btn-block btn-sm disabled" type="button" href="game.html"
-                        role="button">Game</a>
+                    <a class="btn btn-info btn-block btn-sm" href="index.html" role="button">Home</a>
+                    <a class="btn btn-info btn-block btn-sm" href="htp.html" role="button">How to Play</a>
+                    <a class="btn btn-info btn-block btn-sm" href="stf.html" role="button">Study Flags</a>
+                    <a class="btn btn-info btn-block btn-sm disabled" href="game.html" role="button">Game</a>
                     <button class="btn btn-secondary btn-block btn-sm mx-4" data-bs-toggle="modal"
-                        data-bs-target="#gameOptions" id="game-options" type="button" role="button">Game
+                        data-bs-target="#gameOptions" id="game-options">Game
                         Options</button>
                 </div>
             </div>
@@ -114,6 +114,15 @@
                 </div>
             </div>
         </div>
+        <hr class="ind-hr-format">
+        <!-- Copyright panel  -->
+        <div class="d-none d-sm-none d-md-block stf-copyr-panel">
+            <footer>
+                <div class="img-fluid"><img src="assets/img/AY-flag.jpg"></div>
+                <p class="stf-copyr-text">Copyright ©Megalops games @2024</p>
+            </footer>
+        </div>
+    </div>
     </div>
     <!-- Game end modal  -->
     <div class="modal fade" id="GameEndModal" tabindex="-1" aria-labelledby="gameEndModal" aria-hidden="true">
@@ -133,7 +142,7 @@
                     <div class="d-inline" id="h-score">0</div>
                     <div class="d-inline">/</div>
                     <div class="d-inline" id="h-score-q">0</div>
-               </div>
+                </div>
                 <div class="modal-footer game-modal-format">
                     <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -165,7 +174,8 @@
                             50</button>
                     </div>
                     <hr>
-                    <p class="game-mod-text">Game Type - Which regions Flags?</p>
+                    <div class="game-mod-text">Flag regions- NEW FEATURE coming soon!</div>
+                    
                     <div class="text-center game-mod-btn-text">
                         <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="All" type="button"
                             role="button">

@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!-- navigation Bar -->
     <nav class="navbar fixed-top navbar-expand-lg commit navbar-dark" style="background-color: #443627;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,41 +30,43 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="container-fluid">
-                    <a class="btn btn-info btn-block btn-md" type="button" href="index.html" role="button">Home</a>
-                    <a class="btn btn-info btn-block btn-md disabled" type="button" href="htp.html" role="button">How to
+                    <a class="btn btn-info btn-block btn-md" href="index.html">Home</a>
+                    <a class="btn btn-info btn-block btn-md disabled" href="htp.html">How to
                         Play</a>
-                    <a class="btn btn-info btn-block btn-md" type="button" href="stf.html" role="button">Study Flags</a>
-                    <a class="btn btn-info btn-block btn-md" type="button" href="game.html" role="button">Game</a>
+                    <a class="btn btn-info btn-block btn-md" href="stf.html">Study Flags</a>
+                    <a class="btn btn-info btn-block btn-md" href="game.html">Game</a>
                 </div>
-
             </div>
         </div>
     </nav>
     <div class="htp-wrap-banner-panel">
+        <!-- Game header panel -->
         <div id="gameBody" class="htp-banner">
-            <span class="htp-head txt-nonphotoblue">"Flag - It!"</span>
-
-            <div class="htp-text-para txt-lavendar">
-                <p class="htp-text-heading txt-nonphotoblue">How to play Flag-It!</p>
-                <ul>
-                    <li>Flag-It! is a fun and educational game for all, it has over 230 flags from around the world,
-                        the aim of the game is you match the flag to the country/principality </li>
-                    <li>The game picks a random flag from the 233 available falgs and then shows you 4 possible answers
-                    <li>You just have to click on the right answer, and then click "Next"</li>
-                    <li>Dont worry if you get the answer wrong, Flag-it! will show you the correct answer</li>
-                    <li>There are 25 questions in each game by defult</li>
-                    <li>But you can change this in the options if you want more less questions</li>
-                    <li>The flags are selected randomnly from all 230(ish) countries. </li>
-                    <li>The game keeps scores of right and wrongs answers </li>
-
-
-                </ul>
+            <div id="gameBody" class="game-banner">
+                <span class="htp-head txt-nonphotoblue">"Flag - It!"</span>
             </div>
         </div>
         <hr class="ind-hr-format">
-        <div class="htp-copyr-panel">
+        <!-- Flag Panel - contians guidance/overview  -->
+        <div class="htp-flagpanel htp-text-para txt-lavendar">
+            <p class="htp-text-heading txt-nonphotoblue">How to play Flag-It!</p>
+            <ul>
+                <li>Flag-It! is a fun and educational game for all, it has over 230 flags from around the world,
+                    the aim of the game is you match the flag to the country/principality </li>
+                <li>The game picks a random flag from the 233 available falgs and then shows you 4 possible answers
+                <li>You just have to click on the right answer, and then click "Next"</li>
+                <li>Dont worry if you get the answer wrong, Flag-it! will show you the correct answer</li>
+                <li>There are 25 questions in each game by defult</li>
+                <li>But you can change this in the options if you want more less questions</li>
+                <li>The flags are selected randomnly from all 230(ish) countries. </li>
+                <li>The game keeps scores of right and wrongs answers </li>
+            </ul>
+        </div>
+        <hr class="ind-hr-format">
+        <!-- copyright Panel -->
+        <div class="htp-copyr-panel d-none d-sm-none d-md-block">
             <footer>
-                <img src="assets/img/AY-flag.jpg">
+                <div class="img-fluid"><img src="assets/img/AY-flag.jpg"></div>
                 <p class="htp-copyr-text">Copyright ©Megalops @2024</p>
             </footer>
         </div>

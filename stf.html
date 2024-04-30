@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="author" content="L5 Web Diploma student">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- meta title  -->
-     <title>FlagIt!- The Flags of the World Game </title>
+    <!-- meta title  -->
+    <title>FlagIt!- The Flags of the World Game </title>
 </head>
 
 <body>
+    <!-- navigation Bar -->
     <nav class="navbar fixed-top navbar-expand-lg commit navbar-dark" style="background-color: #443627;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -27,68 +28,53 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="container-fluid">
-                    <a class="btn btn-info btn-block btn-md" type="button" href="index.html" role="button">Home</a>
-                    <a class="btn btn-info btn-block btn-md" type="button" href="htp.html" role="button">How to Play</a>
-                    <a class="btn btn-info btn-block btn-md disabled" type="button" href="stf.html" role="button">Study Flags</a> 
-                    <a class="btn btn-info btn-block btn-md" type="button" href="game.html" role="button">Game</a>   
+                    <a class="btn btn-info btn-block btn-md" href="index.html">Home</a>
+                    <a class="btn btn-info btn-block btn-md" href="htp.html">How to Play</a>
+                    <a class="btn btn-info btn-block btn-md disabled" href="stf.html">Study
+                        Flags</a>
+                    <a class="btn btn-info btn-block btn-md" href="game.html">Game</a>
                 </div>
 
             </div>
         </div>
     </nav>
     <div class="stf-wrap-banner-panel">
+        <!-- Heading panel -->
         <div id="gameBody" class="stf-banner">
             <span class="stf-head txt-nonphotoblue">"Flag-It!"</span>
         </div>
         <hr class="ind-hr-format">
+        <!-- Flag panel used displays game name etc -->
         <div id="gameBody" id="study-container" class="stf-flagpanel">
             <span class="stf-sub-head txt-lavendar">Flag-It! - Study the worlds flags here!</span>
             <br>
-            <button type="button" class="btn btn-info" id="load-flags">Load flags</button> 
+            <button type="button" class="btn btn-info" id="load-flags">Load flags</button>
         </div>
         <hr class="ind-hr-format">
-        <div id="gameBody" class="container game-flag-panel">
+        <!-- Flag panel used to display Flag image -->
+        <div id="gameBody" class="container stf-flagpanel">
             <div class="row">
                 <div class="col">
-                    <img src="assets/img/start-game.jpg" alt="country flag image" id="targ-flag" class="stf-img-game">
+                    <img src="assets/img/start-game-new.avif" id="targ-flag"
+                        class="img-fluid stf-img-game">
                 </div>
             </div>
         </div>
         <hr class="ind-hr-format">
+        <!-- Answer panel used to Display Country name  -->
         <div id="gameBody" class="game-ans-panel game-ans-text">
             <!-- country name  added in here -->
             <p id="answer1" class="mx-4 my-1 flag-choice stf-country-head" type="button"> &nbsp;</p>
         </div>
         <hr class="ind-hr-format">
-       <div class="stf-copyr-panel">
+        <!-- copyright panel used to Display Country name  -->
+        <div class="d-none d-sm-none d-md-block stf-copyr-panel">
             <footer>
-                <img src="assets/img/AY-flag.jpg">
+                <div class="d-none d-sm-none d-md-block"><img src="assets/img/AY-flag.jpg"></div>
                 <p class="stf-copyr-text">Copyright ©Megalops games @2024</p>
             </footer>
         </div>
     </div>
-
-    <!-- Modal -- with bootstrap> -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content txt-powederblue" style="background-color: #725e54;">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Country name here</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body stf-modal-format">
-                    <span><img src="assets/img/AA-flag.jpg" width="150" height="100"></span>
-                    <br>
-                    <span> Country </span>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -127,7 +127,8 @@ div footer img {
     position: absolute;
     bottom: 0;
     left: 2.5em;
-    font-size: 0.5em
+    font-size: 0.8em;
+   
 }
 
 /* index page and text styles  */
@@ -200,7 +201,11 @@ div footer img {
     position: absolute;
     bottom: 0;
     left: 2.5em;
-    font-size: 0.5em
+    font-size: 0.8em;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    font-style: normal;
+    color: #d5dcf9;
 }
 
 hr.ind-hr-format {
@@ -245,6 +250,7 @@ hr.ind-hr-format {
     font-size: 2em;
     font-weight: 700;
     font-style: italic;
+    padding: 0 1em;
 }
 
 .htp-text-para {
@@ -256,6 +262,17 @@ hr.ind-hr-format {
     font-style: normal;
 }
 
+.htp-flagpanel {
+    width: 97%;
+    background-color: #725e54;
+    min-height: 98%;
+    text-align: left;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em 0;
+    position: relative;
+
+}
 .htp-wrap-copyr-panel {
     top: 79%;
     width: 70%;

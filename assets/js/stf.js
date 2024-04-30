@@ -4,8 +4,6 @@ let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
 let currentFlag = 1;
 
-console.log("connected")
-
 // Wait for the DOM to finish loading before running the game start
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
@@ -13,11 +11,12 @@ $(document).ready(function () {
   flagInit()
 
   function flagInit() {
-    // Shuffle array, loads the array and shuffles it  
+    // Shuffle the array, loads the array and shuffles it countryArray in flag-dict.js  
     shuffled = countryArray.sort(() => 0.5 - Math.random());
     getFlag();
   }
 
+  // performs the main function of the page loads the flag and displays the name from locale  
   function getFlag() {
     $(flagImage).attr("src", `assets/img/${shuffled[currentFlag].flagName}`);
     $(flagChoices).each(function (i, choice) {

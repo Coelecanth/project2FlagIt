@@ -317,3 +317,50 @@ You can fork this repository by using the following steps:
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 ### Local VS Deployment
+
+# Future Developments
+## All time High scores  
+// check high scores
+    hScoretotalq = parseInt(h-score-q.innerText, 10)
+    if (maxQuestions > hScoretotalq) {
+        $("#h-score-q").text(maxQuestions)
+        
+    } 
+
+ ## Multi region Game 
+
+//captures input from modal - change game type is eg flags by region
+
+// modChgFg()
+// function modChgFg() {
+    // $('.f-class').on("click", function () {
+    //     gameFilter = (this.id);
+    //     if (gameFilter != "All") {
+    //         // call function to creat new arry with territory filter 
+    //         arrFilter(gameFilter)
+    //         //show text with game type on page
+    //         $(".ps-game").show();
+    //         $("#" + "flag-game-type").html(gameFilter + ` Flags`)
+    //         //NOT IMPLMENTED STILL FIXING
+    //     } else { 
+    //         // gameFilter is set to "All" 
+    //         //once closed now start game
+    //         //NOT IMPLMENTED STILL FIXING
+    //         // $("#GameEndModal").on("hide.bs.modal", function () {
+    //              // initNewgame()
+    //         });
+            
+    //     }
+    // });
+//}
+
+
+ function arrFilter(idRegion) {
+     let filteredArr = [];
+     for (let i = 0; i < shuffled.length; i++) {
+         if (shuffled[i].territory === idRegion) {
+             filteredArr = [...filteredArr, shuffled[i]];
+         }
+     }
+    
+ }

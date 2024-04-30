@@ -22,7 +22,6 @@ const wrongQuestions = document.getElementById("questions-wrong");
 const gameStart = document.getElementById("start-game");
 const gameImg = "assets/img/start-game-new.avif"
 
-console.log("connected")
 
 resetScore()
 // set max question and zero values and write to page 
@@ -43,6 +42,17 @@ $(document).ready(function () {
     $("#reset-game").hide();
     //hides game type being played at intial load 
     $(".ps-game").hide();
+    
+    //disable buttons after click so no more choices possible 
+    ///so player see if corect or Wrong - enable next 
+    $('#answer1').prop('disabled', true);
+    $('#answer2').prop('disabled', true);
+    $('#answer3').prop('disabled', true);
+    $('#answer4').prop('disabled', true);
+
+
+
+
 
     $("#start-game").on("click", function () {
         //hides ps-game message of game type played on start of game eg resets message  
@@ -66,30 +76,6 @@ function modChgQ() {
 
     });
 }
-//captures input from modal - change game type is eg flags by region
-//NOT IMPLMENTED STILL FIXING
-// modChgFg()
-// function modChgFg() {
-    // $('.f-class').on("click", function () {
-    //     gameFilter = (this.id);
-    //     if (gameFilter != "All") {
-    //         // call function to creat new arry with territory filter 
-    //         arrFilter(gameFilter)
-    //         //show text with game type on page
-    //         $(".ps-game").show();
-    //         $("#" + "flag-game-type").html(gameFilter + ` Flags`)
-    //         //NOT IMPLMENTED STILL FIXING
-    //     } else { 
-    //         // gameFilter is set to "All" 
-    //         //once closed now start game
-    //         //NOT IMPLMENTED STILL FIXING
-    //         // $("#GameEndModal").on("hide.bs.modal", function () {
-    //              // initNewgame()
-    //         });
-            
-    //     }
-    // });
-//}
 
 function initNewgame() {
     // show next and reset tbutton after start button pressed 
@@ -104,17 +90,6 @@ function initNewgame() {
     $(".flag-choice").prop('disabled', false);
     getFlag();
 }
-
-//NOT IMPLMENTED STILL FIXING
-// function arrFilter(idRegion) {
-//     let filteredArr = [];
-//     for (let i = 0; i < shuffled.length; i++) {
-//         if (shuffled[i].territory === idRegion) {
-//             filteredArr = [...filteredArr, shuffled[i]];
-//         }
-//     }
-    
-// }
 
 function getFlag() {
 
@@ -164,12 +139,7 @@ $(".flag-choice").on("click", function () {
 
     // check to see if we have played max questions 
     sumQuestions = parseInt(correctQuestions.innerText, 10) + parseInt(wrongQuestions.innerText, 10);
-    //check high scores
-    // hScoretotalq= parseInt(h-score-q.innerText, 10)
-    // if (maxQuestions > hScoretotalq) {
-    //     $("#h-score-q").text(maxQuestions)
-        
-    // } 
+    
     //game end modal scores 
     $("#t-score").text("Total Answered  " + sumQuestions)
     $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
