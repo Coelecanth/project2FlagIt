@@ -146,7 +146,7 @@ $(".flag-choice").on("click", function () {
     if (maxQuestions == sumQuestions) {
         $("#game-over-mess").show();
         $("#next-button").hide();
-        gethighScores()
+        
            return setTimeout(resetGame, 2500);
     }
     resetState()

@@ -321,26 +321,20 @@ You can fork this repository by using the following steps:
 # Future Developments
 ## All time High scores  
         
+    /function gethighScores() {
     // check high scores
-     // read high score value from modal checks its not 0 or lower than cuurent
-     hScoretotalq = parseInt(h-score-q.innerText, 10)
-
-     if (maxQuestions > hScoreTotalq) {
-        // if modal value is lower than maxQuestions eg the current number of questions then,
-        // then write the value for max question 
+    hScoreValQ = parseInt(hScore.innerText, 10) 
+    hScoreTotQ = parseInt(hScoreQ.innerText, 10)
+    
+    // read high score from modal checks > x then set value 
+    if (correctQuestions.innerText > hScoreValQ) {
+        $("#h-score").text(correctQuestions.innerText)
         $("#h-score-q").text(maxQuestions)
-     } 
-      // read high score value from modal checks its not 0 or lower than cuurent 
-    hScoreValq =  parseInt(h-score.innerText, 10)
-     if (correctQuestions > hScoreValq) {
-        // if modal value is lower than correctQuestions eg the current 
-        // number of correctly answered questions then,
-        // then write the value for correctQuestions 
-        $("#h-score-q").text(maxQuestions)
-        }
+    }
+    }  
      
 
- ## Multi region Game 
+ ## Multi Region Game 
 I was developing a new feature for the game where you could select a region in the world where flags were from these were idenitified by field in the JSON arraay called territory. There were 5 territories recorded which were Asia, Oceania, Americas, Europe and Africa.   
 
      //captures input from modal - change game type is eg flags by region
