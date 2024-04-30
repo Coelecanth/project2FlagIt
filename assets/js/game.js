@@ -14,6 +14,7 @@ let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
 let currentFlag = 1;
 
+const hScores = JSON.parse(localStorage.getItem('hScores')) || [];
 const totalQuestions = document.getElementById("questions-total");
 const askedQuestions = document.getElementById("questions-asked");
 const correctQuestions = document.getElementById("questions-correct");
@@ -37,7 +38,7 @@ $(document).ready(function () {
     $("#game-over-mess").hide();
     // changed this from hide as
     $("#next-button").hide();
-    $('#game-options').prop('disabled', true);
+    $('#game-options').prop('disabled', false);
     // $("#next-button").hide();
     $("#reset-game").hide();
     //hides game type being played at intial load 
@@ -50,12 +51,12 @@ $(document).ready(function () {
         $("#t-score").text("No Scores Available")
         $("#c-score").text("No Scores Available")
         $("#w-score").text("No Scores Available")
-        //hide Game Bannr to give more space on screen while game is being played 
+        //hide Game Banner to give more space on screen while game is being played 
         $(".game-banner").hide();
-            initNewgame()
+        initNewgame()
     });
 });
-// modal on click functions for game options 
+// modal on click functions for game question No. options 
 //change number of questions for each game
 modChgQ()
 function modChgQ() {
@@ -65,7 +66,8 @@ function modChgQ() {
 
     });
 }
-//change game type is eg flags by region
+//captures input from modal - change game type is eg flags by region
+//NOT IMPLMENTED STILL FIXING
 modChgFg()
 function modChgFg() {
     $('.f-class').on("click", function () {
@@ -76,13 +78,16 @@ function modChgFg() {
             //show text with game type on page
             $(".ps-game").show();
             $("#" + "flag-game-type").html(gameFilter + ` Flags`)
-            
+            //NOT IMPLMENTED STILL FIXING
         } else { 
-            // call initNewgame(gameFilter) 
-            // gameFilter is set to "All" when defined 
+            // gameFilter is set to "All" 
+            //once closed now start game
+            //NOT IMPLMENTED STILL FIXING
+            $("#GameEndModal").on("hide.bs.modal", function () {
+                 // initNewgame()
+            });
+            
         }
-         
-
     });
 }
 
@@ -100,6 +105,7 @@ function initNewgame() {
     getFlag();
 }
 
+//NOT IMPLMENTED STILL FIXING
 function arrFilter(idRegion) {
     let filteredArr = [];
     for (let i = 0; i < shuffled.length; i++) {
@@ -107,7 +113,7 @@ function arrFilter(idRegion) {
             filteredArr = [...filteredArr, shuffled[i]];
         }
     }
-    console.log(filteredArr);
+    
 }
 
 function getFlag() {
@@ -126,7 +132,7 @@ function getFlag() {
 
 // listen for reset game click of 
 $("#reset-game").on("click", function () {
-    // zero scores for next game
+    // zero answer scores for next game
    resetGame()
 });
 
@@ -158,8 +164,13 @@ $(".flag-choice").on("click", function () {
 
     // check to see if we have played max questions 
     sumQuestions = parseInt(correctQuestions.innerText, 10) + parseInt(wrongQuestions.innerText, 10);
+    //check high scores
+    hScoretotalq= parseInt(h-score-q.innerText, 10)
+    if (maxQuestions > hScoretotalq) {
+        $("#h-score-q").text(maxQuestions)
+        
+    } 
     //game end modal scores 
-
     $("#t-score").text("Total Answered  " + sumQuestions)
     $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
     $("#w-score").text("Wrong answers  " + wrongQuestions.innerText)

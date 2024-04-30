@@ -505,7 +505,7 @@ const countryArray = [
     "territory": "Asia"
   },
   {
-    "locale": "iraq",
+    "locale": "Iraq",
     "flagName": "IZ-flag.jpg",
     "territory": "Asia"
   },
