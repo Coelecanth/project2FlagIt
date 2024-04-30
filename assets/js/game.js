@@ -43,17 +43,10 @@ $(document).ready(function () {
     //hides game type being played at intial load 
     $(".ps-game").hide();
     
-    //disable buttons after click so no more choices possible 
-    ///so player see if corect or Wrong - enable next 
-    $('#answer1').prop('disabled', true);
-    $('#answer2').prop('disabled', true);
-    $('#answer3').prop('disabled', true);
-    $('#answer4').prop('disabled', true);
-
-
-
-
-
+    //disable buttons after click so choices not possible before start 
+    // rest all buttons using class
+    $('.flag-choice').prop('disabled', true);
+    
     $("#start-game").on("click", function () {
         //hides ps-game message of game type played on start of game eg resets message  
         $(".ps-game").hide();
@@ -129,11 +122,10 @@ $(".flag-choice").on("click", function () {
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
     }
     //disable buttons after click so no more choices possible 
-    ///so player see if corect or Wrong - enable next 
-    $('#answer1').prop('disabled', true);
-    $('#answer2').prop('disabled', true);
-    $('#answer3').prop('disabled', true);
-    $('#answer4').prop('disabled', true);
+    
+    // reset all buttons using class
+    $('.flag-choice').prop('disabled', true);
+    //so player can see if correct or Wrong - enable next 
     $('#next-button').prop('disabled', false);
     $('#start-game').prop('disabled', true);
 

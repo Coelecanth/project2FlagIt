@@ -320,39 +320,49 @@ You can fork this repository by using the following steps:
 
 # Future Developments
 ## All time High scores  
-// check high scores
-    hScoretotalq = parseInt(h-score-q.innerText, 10)
-    if (maxQuestions > hScoretotalq) {
-        $("#h-score-q").text(maxQuestions)
         
-    } 
+    // check high scores
+     // read high score value from modal checks its not 0 or lower than cuurent
+     hScoretotalq = parseInt(h-score-q.innerText, 10)
+
+     if (maxQuestions > hScoreTotalq) {
+        // if modal value is lower than maxQuestions eg the current number of questions then,
+        // then write the value for max question 
+        $("#h-score-q").text(maxQuestions)
+     } 
+      // read high score value from modal checks its not 0 or lower than cuurent 
+    hScoreValq =  parseInt(h-score.innerText, 10)
+     if (correctQuestions > hScoreValq) {
+        // if modal value is lower than correctQuestions eg the current 
+        // number of correctly answered questions then,
+        // then write the value for correctQuestions 
+        $("#h-score-q").text(maxQuestions)
+        }
+     
 
  ## Multi region Game 
+I was developing a new feature for the game where you could select a region in the world where flags were from these were idenitified by field in the JSON arraay called territory. There were 5 territories recorded which were Asia, Oceania, Americas, Europe and Africa.   
 
-//captures input from modal - change game type is eg flags by region
-
-// modChgFg()
-// function modChgFg() {
-    // $('.f-class').on("click", function () {
-    //     gameFilter = (this.id);
-    //     if (gameFilter != "All") {
-    //         // call function to creat new arry with territory filter 
-    //         arrFilter(gameFilter)
-    //         //show text with game type on page
-    //         $(".ps-game").show();
-    //         $("#" + "flag-game-type").html(gameFilter + ` Flags`)
-    //         //NOT IMPLMENTED STILL FIXING
-    //     } else { 
-    //         // gameFilter is set to "All" 
-    //         //once closed now start game
-    //         //NOT IMPLMENTED STILL FIXING
-    //         // $("#GameEndModal").on("hide.bs.modal", function () {
-    //              // initNewgame()
-    //         });
-            
-    //     }
-    // });
-//}
+     //captures input from modal - change game type is eg flags by region
+    modChgFg()
+    function modChgFg() {
+       $('.f-class').on("click", function () {
+       gameFilter = (this.id); 
+       if (gameFilter != "All") {
+         // call function to creat new arry with territory filter
+        arrFilter(gameFilter)
+         //show text with game type on page
+        $(".ps-game").show();
+        $("#" + "flag-game-type").html(gameFilter + ` Flags`)
+    } else { 
+         // gameFilter is set to "All" 
+         //once closed now start game
+        $("#GameEndModal").on("hide.bs.modal", function () {
+        initNewgame()
+        });
+       }
+      });
+     }
 
 
  function arrFilter(idRegion) {
