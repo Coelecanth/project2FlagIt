@@ -1,20 +1,21 @@
 /* jshint esversion: 11, jquery: true */
+
+//variable for Array of countries 
 let shuffled;
+
+//variables for scores 
 let sumQuestions;
-var idButton;
 let maxQuestions = 10;
 let intialCorrect = 0;
 let intialWrong = 0;
 let intialAsked = 0;
-let pVal;
-let pNew;
-let gameFilter = "All"
+let idButton;
 
 let flagImage = document.getElementById("targ-flag");
 let flagChoices = document.querySelectorAll(".flag-choice");
 let currentFlag = 1;
 
-const hScores = JSON.parse(localStorage.getItem('hScores')) || [];
+//selectors for game scores 
 const totalQuestions = document.getElementById("questions-total");
 const askedQuestions = document.getElementById("questions-asked");
 const correctQuestions = document.getElementById("questions-correct");
@@ -46,6 +47,8 @@ $(document).ready(function () {
     //disable buttons after click so choices not possible before start 
     // rest all buttons using class
     $('.flag-choice').prop('disabled', true);
+
+      
     
     $("#start-game").on("click", function () {
         //hides ps-game message of game type played on start of game eg resets message  
@@ -140,6 +143,7 @@ $(".flag-choice").on("click", function () {
     if (maxQuestions == sumQuestions) {
         $("#game-over-mess").show();
         $("#next-button").hide();
+        getHighScore()
         return setTimeout(resetGame, 2500);
     }
     resetState()
@@ -187,4 +191,19 @@ function resetGame() {
     // show banner post game 
     $(".game-banner").show();
     
+}
+
+function getHighScore() {
+    // check high scores
+     hScoreValQ =  parseInt(h-score.innerText, 10) //define a const for it 
+     hScoreTotalQ = parseInt(h-score-q.innerText, 10)
+
+     // read high score from modal checks > 0, or > set value 
+     if (correctQuestions > hScoreValq) {
+        $("#h-score").text(correctQuestions)
+        if (maxQuestions > hScoreTotalq) {
+           // now check total questions 
+            $("#h-score-q").text(maxQuestions)
+        }
+    } 
 }
