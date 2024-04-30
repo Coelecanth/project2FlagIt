@@ -185,7 +185,7 @@ Emulated devices using Google Chrome emulator
 - Kindle fire 
 - Ipad Pro
 Physical device 
-- Pc desktop -  Firefox, Chrome, and Edge
+- PC desktop -  Firefox, Chrome, and Edge
 - Samsung s22 Ultra - Firefox and Chrome    
 - iphone XR#
 ### Browser 
@@ -233,45 +233,13 @@ resolved this by hiding Icon at small screen size using bootstrap setting for sm
 ### 5 Game responsiveness on samll screens - main flag Image 
 
 
-
-# Deployment 
-### **GitHub Pages**
-
-GitHub pages were used to deploy this site.
-
-The steps to deploy the live site are:
-
-In the GitHub repository navigate to the 'Settings' tab
-On the left hand menu click on 'Pages'
-Under Build and Deployment > Branch select 'main' and '/root'
-Click save
-The link to the live website will then be displayed at the top when successfully published
-
-### **Forking the GitHub Repository**
-
- Go to the GitHub repository
-Click on the fork button in the top right hand corner of the page
-
-### **Cloning the GitHub Repository**
-
-+ Go the GitHub repository
-+ Click on the 'Code' button
-+ In the dropdown menu click on 'HTTPS'
-+ Copy the link to the clipboard
-+ Open Git Bash
-+ Locate the desired directory where you want to place the cloned directory
-+ Type 'git clone' and then paste the copied URL
-+ Press 'enter' to create the clone
-
 # Acknowledgements
 
-- Mentor support at Code Institute for their support.
+- My thanks to Tim my Mentor who provides extensive and deep insite in to the subject matter, who has been an absolute valued help.
 
 - Tutor for continuous helpful input and feedback
 
 - Friends and family for valuable insights and feedback
-
-
 
 ## Deployment
 
@@ -319,9 +287,12 @@ You can fork this repository by using the following steps:
 ### Local VS Deployment
 
 # Future Developments
-## All time High scores  
-        
-    /function gethighScores() {
+## All time High Scores  
+ One feature which i would have liked to include in the game is to have persistent scores for all time high score
+ the following code updates the modal page to show this but in its cuurent guise only persists in the cuurent session of the game 
+ Once the page has been reloaded this information is lost. to enhance this further development is needed to add using the "localstorage" to store this information in a cookie, and then this would persist in the game for that browser on that machine, ideally a backend solution is require to store the game high scores, where web service would capture during game play and then restore this information wehna new session is started in diffewrnt browser and/or machine.   
+
+    function gethighScores() {
     // check high scores
     hScoreValQ = parseInt(hScore.innerText, 10) 
     hScoreTotQ = parseInt(hScoreQ.innerText, 10)
@@ -332,12 +303,22 @@ You can fork this repository by using the following steps:
         $("#h-score-q").text(maxQuestions)
     }
     }  
-     
-
- ## Multi Region Game 
-I was developing a new feature for the game where you could select a region in the world where flags were from these were idenitified by field in the JSON arraay called territory. There were 5 territories recorded which were Asia, Oceania, Americas, Europe and Africa.   
-
-     //captures input from modal - change game type is eg flags by region
+## Multi Region Game 
+I was developing a new feature for the game where you could select a region in the world where flags were from these were idenitified by 
+field in the JSON array called territory. 
+There are 5 territories contained in flag-dict.js which are  
+- Asia 
+- Oceania  
+- Americas 
+- Europe 
+- Africa   
+ 
+ Code below would firstly take input from the button shown in the modal game options. The id from the button is the same 
+ as the value in territory eg "(id Oceania) == (territory  Oceania)", once this has been captured a negative match ("!= All") is made. Then the 
+ the function arrFilter is called passing the id to the function from here new array is loaded and shuffled to produce the chosen scope
+ The initNewgame function is called to start the game.   
+ 
+    //captures input from modal - change game type is eg flags by region
     modChgFg()
     function modChgFg() {
        $('.f-class').on("click", function () {
@@ -348,23 +329,52 @@ I was developing a new feature for the game where you could select a region in t
          //show text with game type on page
         $(".ps-game").show();
         $("#" + "flag-game-type").html(gameFilter + ` Flags`)
+        initNewgame(filteredArr)
     } else { 
          // gameFilter is set to "All" 
          //once closed now start game
         $("#GameEndModal").on("hide.bs.modal", function () {
-        initNewgame()
+        initNewgame("All")
         });
        }
       });
      }
+    function arrFilter(idRegion) {
+        let filteredArr = [];
+        for (let i = 0; i < shuffled.length; i++) {
+            if (shuffled[i].territory === idRegion) {
+                filteredArr = [...filteredArr, shuffled[i]];
+            }
+        }
+    }
+
+This feature requires more work to complete to revise the initNewgame, to accpet both inputs from the regions and all flags (eg current game flow), 
+together with associatted testing required to check for alterations in the game flow and there fore erronous states.  
 
 
- function arrFilter(idRegion) {
-     let filteredArr = [];
-     for (let i = 0; i < shuffled.length; i++) {
-         if (shuffled[i].territory === idRegion) {
-             filteredArr = [...filteredArr, shuffled[i]];
-         }
-     }
-    
- }
+## The Look-ee-like-ee Game 
+
+I was developing a new feature for the game where you could a select game which selected a grouping of flags which are similar in colour and make up.  
+To enable this feature I extend the JSON file flag-dict.js and added a further named value in it of "lookelike" this contians a number which represent a grouping of flags, there are 47 Flag groupings.
+So the game would consist of loading 47 groups with an array of 4 flags in each, and then the game would be of 47 questions, with a differnt flag group for each question. The following code example show the structure oif the JSOn file. The full file has been included /assets/js/flag-dict2.js 
+ 
+    const countryArray = [
+    {
+      "country": "Afghanistan",
+      "flag-name": "AF-flag.jpg",
+      "territory": "Asia",
+      "lookelike": 4
+    },
+    {
+      "country": "Albania",
+      "flag-name": "AL-flag.jpg",
+      "territory": "Europe",
+      "lookelike": 33
+    },
+    {
+      "country": "Algeria",
+      "flag-name": "AG-flag.jpg",
+      "territory": "Africa",
+      "lookelike": 18
+    },
+    ]
