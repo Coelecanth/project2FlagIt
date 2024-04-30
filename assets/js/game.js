@@ -16,6 +16,8 @@ let flagChoices = document.querySelectorAll(".flag-choice");
 let currentFlag = 1;
 
 //selectors for game scores 
+const hScore = document.getElementById("h-score");
+const hScoreQ = document.getElementById("h-score-q");
 const totalQuestions = document.getElementById("questions-total");
 const askedQuestions = document.getElementById("questions-asked");
 const correctQuestions = document.getElementById("questions-correct");
@@ -132,19 +134,20 @@ $(".flag-choice").on("click", function () {
     $('#next-button').prop('disabled', false);
     $('#start-game').prop('disabled', true);
 
-    // check to see if we have played max questions 
     sumQuestions = parseInt(correctQuestions.innerText, 10) + parseInt(wrongQuestions.innerText, 10);
     
     //game end modal scores 
     $("#t-score").text("Total Answered  " + sumQuestions)
     $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
     $("#w-score").text("Wrong answers  " + wrongQuestions.innerText)
-
+    
+    
+    // check to see if we have played max questions 
     if (maxQuestions == sumQuestions) {
         $("#game-over-mess").show();
         $("#next-button").hide();
-        getHighScore()
-        return setTimeout(resetGame, 2500);
+        gethighScores()
+           return setTimeout(resetGame, 2500);
     }
     resetState()
 });
@@ -192,18 +195,5 @@ function resetGame() {
     $(".game-banner").show();
     
 }
+   
 
-function getHighScore() {
-    // check high scores
-     hScoreValQ =  parseInt(h-score.innerText, 10) //define a const for it 
-     hScoreTotalQ = parseInt(h-score-q.innerText, 10)
-
-     // read high score from modal checks > 0, or > set value 
-     if (correctQuestions > hScoreValq) {
-        $("#h-score").text(correctQuestions)
-        if (maxQuestions > hScoreTotalq) {
-           // now check total questions 
-            $("#h-score-q").text(maxQuestions)
-        }
-    } 
-}
