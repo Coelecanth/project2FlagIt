@@ -64,9 +64,9 @@ div footer img {
 
 .stf-head {
     font-family: 'Economica';
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
-    font-style: normal;
+    font-style: italic;
 }
 
 .stf-sub-head {
@@ -138,9 +138,9 @@ div footer img {
 } 
 .ind-head {
     font-family: 'Economica';
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
-    font-style: normal;
+    font-style: italic;
 }
 
 .ind-sub-head {
@@ -217,9 +217,9 @@ hr.ind-hr-format {
 /* ==============how to play formatting styles ================ */
 .htp-head {
     font-family: 'Economica';
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
-    font-style: normal;
+    font-style: italic;
 }
 
 .htp-wrap-banner-panel {
@@ -246,8 +246,8 @@ hr.ind-hr-format {
 
 .htp-text-heading {
     text-align: left;
-    font-family: 'Economica';
-    font-size: 2em;
+    font-family: "Roboto Slab";
+    font-size: 1.5em;
     font-weight: 700;
     font-style: italic;
     padding: 0 1em;
@@ -357,7 +357,7 @@ hr.ind-hr-format {
     font-family: 'Economica';
     font-size: 2em;
     font-weight: 700;
-    font-style: normal;
+    font-style: italic;
 }
 .game-head-end {
     font-family: 'Economica';
