@@ -198,12 +198,13 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 ### JavaScript
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
-
+ When I ran jshint one error I could not remove was that one of the statements was calling the countryArray which was external to the file. So hence could not be resolved
+ Like waise as the flag-dict just defines an array, there is no calling function in the file. Becuase the calling function are in the script files. 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| assets | flag-dict.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| assets | game.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| assets | stf.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| assets | flag-dict.js | ![screenshot](documentation/img/clean-jshint-flag-dict.png) | |
+| assets | game.js | ![screenshot](documentation/img/clean-jshint-game.png) | |
+| assets | stf.js | ![screenshot](documentation/img/clean-jshint-stf.png) | |
 
 ## Browser Compatibility
 
