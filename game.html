@@ -45,7 +45,7 @@
     <!-- Game panels -->
     <div class="game-wrap-banner-panel">
         <!-- Game header panel -->
-        <div id="gameBody" class="game-banner">
+        <div class="game-banner">
             <span class="game-head txt-nonphotoblue">"Flag-It!"</span>
             <div class="txt-lavendar game-sub-head d-none d-lg-none d-xl-block ">
                 Press start to play Flag-It!
@@ -53,7 +53,7 @@
         </div>
         <hr class="ind-hr-format">
         <!-- flag panel -->
-        <div id="gameBody" class="container game-flag-panel">
+        <div class="container game-flag-panel">
             <div class="row">
                 <div class="col">
                     <div class="txt-lavendar game-type-text">
@@ -64,7 +64,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="assets/img/start-game-new.avif" id="targ-flag" class="img-game img-fluid mb-2">
+                    <img src="assets/img/start-game-new.avif" id="targ-flag" class="img-game img-fluid mb-2" alt="Game Start flag">
                     <p class="game-head-end" id="game-over-mess">Game Over!</p>
                 </div>
             </div>
@@ -81,7 +81,7 @@
         </div>
         <!-- answer panel -->
         <hr class="ind-hr-format">
-        <div id="gameBody" class="game-ans-panel game-ans-text">
+        <div class="game-ans-panel game-ans-text">
             <div class="d-none d-lg-none d-xl-block">
                 Select Your Answer Here
             </div>
@@ -93,22 +93,22 @@
         </div>
         <!-- game score panel -->
         <hr class="ind-hr-format">
-        <div id="gameBody" class="game-score-panel game-score-text">
+        <div class="game-score-panel game-score-text">
             <div class="container" id="questions-asked-text">
                 <div class="row game-score-text">
                     <div class="col">
                         <div class="d-inline mx-4 game-sc-r-panel-text" id="qa-txt">Quest. Asked</div>
-                        <div class="d-inline ml-4" id="questions-asked">&nbsp</div>
+                        <div class="d-inline ml-4" id="questions-asked">&nbsp;</div>
                         <div class="d-inline" id="divider">/</div>
-                        <div class="d-inline mr-4" id="questions-total">&nbsp</div>
+                        <div class="d-inline mr-4" id="questions-total">&nbsp;</div>
                     </div>
                     <div class="col">
                         <div class="d-inline mx-4" id="q-txt">Correct Answer</div>
-                        <div class="d-inline mx-2" id="questions-correct">&nbsp </div>
+                        <div class="d-inline mx-2" id="questions-correct">&nbsp;</div>
                     </div>
                     <div class="col">
                         <div class="d-inline mx-4 game-sc-r-panel-text" id="w-txt">Wrong Answer</div>
-                        <div class="d-inline mx-2 game-sc-r-panel-text" id="questions-wrong">&nbsp </div>
+                        <div class="d-inline mx-2 game-sc-r-panel-text" id="questions-wrong">&nbsp;</div>
                     </div>
 
                 </div>
@@ -118,18 +118,18 @@
         <!-- Copyright panel  -->
         <div class="d-none d-sm-none d-md-block stf-copyr-panel">
             <footer>
-                <div class="img-fluid"><img src="assets/img/AY-flag.jpg"></div>
+                <div class="img-fluid"><img src="assets/img/AY-flag.jpg" alt="game icon in footer"></div>
                 <p class="stf-copyr-text">Copyright ©Megalops games @2024</p>
             </footer>
         </div>
     </div>
-    </div>
+    
     <!-- Game end modal  -->
     <div class="modal fade" id="GameEndModal" tabindex="-1" aria-labelledby="gameEndModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header game-modal-format">
-                    <h1 class="modal-title fs-5 game-mod-text" id="headModalLabel">Game Over</h1>
+                    <h1 class="modal-title fs-5 game-mod-text" id="endhModal">Game Over</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body game-mod-text game-modal-format">
@@ -150,55 +150,46 @@
         </div>
     </div>
     <!-- Game options modal  -->
-    <div class="modal fade" id="gameOptions" tabindex="-1" aria-labelledby="gameOptionsModal" aria-hidden="true">
+    <div class="modal fade" id="gameOptions" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header game-modal-format">
-                    <h1 class="modal-title fs-3 game-mod-text" id="headModalLabel">Game Options</h1>
+                    <h1 class="modal-title fs-3 game-mod-text" id="gamehModal">Game Options</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body game-modal-format">
                     <p class="game-mod-text">How many Questions do you want per game? </p>
                     <div class="game-mod-btn-text">
-                        <button class="q-class btn btn-secondary btn-block btn-md mb-3" id="5" type="button"
-                            role="button">
-                            5</button>
-                        <button class="q-class btn btn-secondary btn-block btn-md mb-3 ms-5" id="10" type="button"
-                            role="button">
-                            10</button>
-                        <button class="q-class btn btn-secondary btn-block btn-md mb-3 mx-5" id="25" type="button"
-                            role="button">
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3" id="5"
+                            >5</button>
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3 ms-5" id="10" 
+                            >10</button>
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3 mx-5" id="25">
                             25</button>
-                        <button class="q-class btn btn-secondary btn-block btn-md mb-3" id="50" type="button"
-                            role="button">
+                        <button class="q-class btn btn-secondary btn-block btn-md mb-3" id="50" >
                             50</button>
                     </div>
                     <hr>
                     <div class="game-mod-text">Flag regions- NEW FEATURE coming soon!</div>
                     
                     <div class="text-center game-mod-btn-text">
-                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="All" type="button"
-                            role="button">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="All">
                             All Flags</button>
-                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2 mx-2" id="Africa" type="button"
-                            role="button">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2 mx-2" id="Africa">
                             Africa Flags</button>
-                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="Americas" type="button"
-                            role="button">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="Americas">
                             Americas Flags</button>
                     </div>
                     <div class="text-center game-mod-btn-text">
-                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="Asia" type="button"
-                            role="button">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2" id="Asia">
                             Asia Flags</button>
-                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2 ms-2" id="Oceania" type="button"
-                            role="button">
+                        <button class="f-class btn btn-secondary btn-block btn-lg mb-2 ms-2" id="Oceania">
                             Oceania Flags</button>
                     </div>
                 </div>
 
                 <div class="modal-footer game-modal-format">
-                    <button type="button" class="btn btn-info" id="submit-close" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-info" id="submit-close" data-bs-dismiss="modal">Close</button>
 
                 </div>
             </div>
