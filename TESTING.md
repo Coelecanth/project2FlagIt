@@ -2,7 +2,128 @@
 
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
+# High Level Test Strategy 
+- Responsiveness -  tested across mutiple screen size and devices 
+- User testing - Game flow and interaction 
+- Javascript operation 
+- javascript automated testing  
+- validation of code - see section below  
+- performance of pages/code - see section below 
 
+## MarkUp Validation -  
+The W3C Markup Validator were used to validate all page of the project to ensure there were no syntax errors in the project.
+- W3C Markup Validator - Results can be seen in the results section later in this document 
+
+
+## Device base 
+The follwoing devices were tested against, these were selected to provide a broad but common base of devices  
+
+Emulated devices using Google Chrome emulator   
+- Iphone XR 
+- galaxy s20 
+- Ipad mini 
+- Kindle fire 
+- Ipad Pro
+Physical device 
+- PC desktop -  Firefox, Chrome, and Edge
+- Samsung s22 Ultra - Firefox and Chrome 
+- Samsung s20 Ultra 
+- Samsung Flip     
+- iphone XR
+
+### Browser 
+The site was tested on the following browsers acroos the above devices :
+ - Safari
+ - Google Chrome
+ - Mozilla Firefox
+ - Microsoft Edge
+
+## Test plan
+The testing on these platfroms was really completed by exercising the game and looking for any erronous behaviour/situations that developed. in particular 
+I tested the following features when exercising the game
+
+- Game page responsiveness 
+- User features - reduce scrolling while playing 
+- User feature - Questions for game change
+- User features - navigation bar works 
+    - changes size when viewport reduces 
+    - navbar open and closes when clicked 
+
+
+Where testing produced problems/bugs, those that required remediation are documented in the TTesting Issues and Resolution section
+
+
+
+## JS automated testing
+using JEST 
+
+## Performance Testing  
+### [GtMetrix](https://gtmetrix.com/) Testing 
+
+### lighthouse 
+
+# Testing Issues and Resolution
+
+### 1. Bug - Game Flow behaviour after Start Pressed  
+Problem found when AFTER the "Start" button is clicked in the game, the "Next" and "Restart Game" button is active even though no answer has been selected.
+This would cause the game to go into a dead game state and you would have to relaod the page.  
+### Resoloution 
+The resolution to this was to hide the buttons so that they could not used and thi also follows the idea of removing game estate to make the game more playable. what was perfomred was to hide the buttons until after an answer button had been pressed. 
+
+
+### 2. Bug - Game Flow behaviour with reset Button after start 
+Steps to reproduce 
+1. Once a game has been played (and scores are recorded). 
+2. The player then presses Start and the game is started again. 
+3. If you now press the reset button, having not selected any answers, 
+4. The game ends, and "End of Game" Modal is shown, and the scores from the previous game are shown. 
+the scores should have been zeroed at the end of the game in step 1
+
+#### Resolution 
+This happens as the scores have been written to the modal page, and the modal page values had not 
+been reset as part of the restart process. 
+This was fixed by resetting the scores values in the modal page as part of the reset.
+
+### 3. Bug - Game Responsiveness with Game page when playing 
+|Responsiveness of the main flag panel on small screens| 
+| ------------------------| 
+| The below images show the issue | 
+| ![screenshot](documentation/img/mis-flag.avif) |
+ 
+ To control the space in the Flag Panel I used the boot strap grid, with 1 row and 3 columns. 
+ This gave me alignmnet and spacing, but becuas the game hides buttons at different points of the game 
+ and when playing on small dvives it would cause the last column to wrap, causing the flag and butons to lose all ther ealignment.
+
+ #### Resolution 
+  The resolution to this was to change the Bootstrap grid to 3 rows, with one column in each row, 
+  and set the buttons to be displayed in a block in the column.
+  This then aligns the buttons and image without issue, and resizes gracefully as the screen port chjanges.   
+   
+
+
+### 4 Game Responsiveness of the Footer on Small Screens 
+On reducing the viewport size the responsiveness would alter both image and
+banner cuasing the the image and text to clash 
+
+|Responsiveness of the footer on small screens| 
+| ------------------------| 
+| The below images show the issue | 
+| ![screenshot](documentation/img/footer-clash.avif) |
+#### Resolution
+Intially i reoslved this by hiding the flag Icon at small screen size using bootstrap 
+setting for small on the image eg d-none d-sm-none d-md-block. However upon 
+reviewing this further when using some of the other pages the texts was causing an issue, 
+reducing the text size just made the copyright unreadable. So it became advantagous just to hide 
+the whole copyright banner at small screen sizes, on all pages except the home page. 
+Which still retains the text.     
+
+### 5 Game Flow - Game page
+A bug was found where it was still possible to press an answer button when the game had finished. 
+This would cause the game to go into a dead game state and you would have to relaod the page. 
+#### Resolution
+This was caused by some additions I had made to the game flow in the End of game routines and these 
+had been added in the wrong place, this was rectified by altering the postions of statements 
+eg the disable the answer buttons  
 
 Feature-by-Feature Testing:
 
@@ -72,7 +193,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| assets | style.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| assets | style.css | ![screenshot](documentation/img/clean-css-w3c.png) | |
 
 ### JavaScript
 

@@ -8,7 +8,7 @@ let currentFlag = 1;
 // Get the button for start game and add event listeners for click.
 $(document).ready(function () {
 
-  flagInit()
+  flagInit();
 
   function flagInit() {
     // Shuffle the array, loads the array and shuffles it countryArray in flag-dict.js  
@@ -25,14 +25,14 @@ $(document).ready(function () {
       choice.innerText = shuffled[arrayIndex].locale;
       let randomOrder = Math.floor(Math.random() * 4) + 1;
       $(choice).css("order", randomOrder);
-    })
+    });
   }
 
   // listen for click of load flag button
   $("#load-flags").on("click", function () {
 
     // load flag /next flag
-    flagInit()
+    flagInit();
 
   });
 });

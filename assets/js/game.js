@@ -16,23 +16,20 @@ let flagChoices = document.querySelectorAll(".flag-choice");
 let currentFlag = 1;
 
 //selectors for game scores 
-const hScore = document.getElementById("h-score");
-const hScoreQ = document.getElementById("h-score-q");
 const totalQuestions = document.getElementById("questions-total");
 const askedQuestions = document.getElementById("questions-asked");
 const correctQuestions = document.getElementById("questions-correct");
 const wrongQuestions = document.getElementById("questions-wrong");
-const gameStart = document.getElementById("start-game");
-const gameImg = "assets/img/start-game-new.avif"
+const gameImg = "assets/img/start-game-new.avif";
 
 
-resetScore()
+resetScore();
 // set max question and zero values and write to page 
 function resetScore() {
     totalQuestions.innerText = maxQuestions;
-    correctQuestions.innerText = intialCorrect
-    wrongQuestions.innerText = intialWrong
-    askedQuestions.innerText = intialAsked
+    correctQuestions.innerText = intialCorrect;
+    wrongQuestions.innerText = intialWrong;
+    askedQuestions.innerText = intialAsked;
 }
 // Wait for the DOM to finish loading before running the game start
 // Get the button for start game and add event listeners for click.
@@ -56,17 +53,17 @@ $(document).ready(function () {
         //hides ps-game message of game type played on start of game eg resets message  
         $(".ps-game").hide();
         // writes to modal to clear down scores otherwise can report old scores if reset 
-        $("#t-score").text("No Scores Available")
-        $("#c-score").text("No Scores Available")
-        $("#w-score").text("No Scores Available")
+        $("#t-score").text("No Scores Available");
+        $("#c-score").text("No Scores Available");
+        $("#w-score").text("No Scores Available");
         //hide Game Banner to give more space on screen while game is being played 
         $(".game-banner").hide();
-        initNewgame()
+        initNewgame();
     });
 });
 // modal on click functions for game question No. options 
 //change number of questions for each game
-modChgQ()
+modChgQ();
 function modChgQ() {
     $('.q-class').on("click", function () {
         maxQuestions = (this.id);
@@ -101,12 +98,12 @@ function getFlag() {
         $(choice).css("order", randomOrder);
         $('#start-game').prop('disabled', true);
     });
-};
+}
 
 // listen for reset game click of 
 $("#reset-game").on("click", function () {
     // zero answer scores for next game
-   resetGame()
+   resetGame();
 });
 
 // listen for click of all answer buttons
@@ -116,12 +113,12 @@ $(".flag-choice").on("click", function () {
     idButton = this.id;
     // shuffled array - answer 1 is the correct answer but shown in alternate positions
     if (idButton == "answer1") {
-        $('#answer1').html(`<h3>Correct</h3>`)
+        $('#answer1').html(`<h3>Correct</h3>`);
         correctQuestions.innerText = parseInt(correctQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
     } else {
         //all other answer are therefore incorrect 
-        $("#" + idButton).html(`<h3>Wrong</h3>`)
+        $("#" + idButton).html(`<h3>Wrong</h3>`);
         $('#answer1').addClass('btn-success').removeClass('btn-info');
         wrongQuestions.innerText = parseInt(wrongQuestions.innerText) + 1;
         askedQuestions.innerText = parseInt(askedQuestions.innerText) + 1;
@@ -137,9 +134,9 @@ $(".flag-choice").on("click", function () {
     sumQuestions = parseInt(correctQuestions.innerText, 10) + parseInt(wrongQuestions.innerText, 10);
     
     //game end modal scores 
-    $("#t-score").text("Total Answered  " + sumQuestions)
-    $("#c-score").text("Correct Answers  " + correctQuestions.innerText)
-    $("#w-score").text("Wrong answers  " + wrongQuestions.innerText)
+    $("#t-score").text("Total Answered  " + sumQuestions);
+    $("#c-score").text("Correct Answers  " + correctQuestions.innerText);
+    $("#w-score").text("Wrong answers  " + wrongQuestions.innerText);
     
     
     // check to see if we have played max questions 
@@ -149,7 +146,7 @@ $(".flag-choice").on("click", function () {
         
            return setTimeout(resetGame, 2500);
     }
-    resetState()
+    resetState();
 });
 
 function resetState() {
@@ -167,7 +164,7 @@ function resetState() {
         $('#start-game').prop('disabled', false);
         
         // call game start 
-        initNewgame()
+        initNewgame();
     });
 }
 
@@ -177,7 +174,7 @@ function resetGame() {
     $("#reset-game").hide();
     //load default values to page 
     $("#targ-flag").attr('src', gameImg);
-    $(".flag-choice").html("&nbsp")
+    $(".flag-choice").html("&nbsp;");
     $('.flag-choice').prop('disabled', false);
     // enable start button - for new game  
     $('#start-game').prop('disabled', false);
@@ -188,7 +185,7 @@ function resetGame() {
     // show modal with game summary
     $("#GameEndModal").modal('show');
     // zero scores for next game
-        resetScore()
+        resetScore();
     // enables game options after game end 
     $('#game-options').prop('disabled', false);
     // show banner post game 
