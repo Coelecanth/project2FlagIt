@@ -57,7 +57,7 @@ I tested the following features when exercising the game
 Where testing produced problems/bugs, those that required remediation are documented in the Testing Issues and Resolution section
 
 ## JS automated testing
-using JEST 
+using JEST plrease section later in the document
 
 
 ## Code Validation
@@ -212,7 +212,7 @@ Reduce scrolling feature
 | As a site player, I would like the intereface to show my score for the last played game | ![screenshot](documentation/gameplay/game-play3.webp) |
 | As a site player, I would like the intereface to pause when the game ends so I can see the last answer is correct or wrong | ![screenshot](documentation/gameplay/game-play7.webp) |
 | As a site player, I would like the game to change the number of questions I can play. | ![screenshot](documentation/gameplay/game-play2.webp) |
-| Have a seperate learn the flags section where game player can look at all flags and become familar with with the flags of each country | ![screenshot](documentation/gameplay/game-play5.webp) |
+| Have a seperate "learn the flags" section where game player can look at all flags and become familar with the flags of each country | ![screenshot](documentation/gameplay/game-play5.webp) |
  
 
 ## Automated Testing
@@ -223,13 +223,7 @@ I fully acknowledge and understand that, in a real-world scenario, an extensive 
 
 ### JavaScript (Jest Testing)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Adjust the code below (file names, etc.) to match your own project files/folders.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality.
+I have used the [Jest](https://jestjs.io) JavaScript testing framework to test a smal elelemt of the application functionality.
 
 In order to work with Jest, I first had to initialize NPM.
 
@@ -248,7 +242,7 @@ Without the following, Jest won't properly run the tests:
 
 - `npm install -D jest-environment-jsdom`
 
-Due to a change in Jest's default configuration, you'll need to add the following code to the top of the `.test.js` file:
+Due to a change in Jest's default configuration, Iw as advised that I needed to add the following code to the top of the `fag-array.test.js` file:
 
 ```js
 /**
@@ -256,57 +250,21 @@ Due to a change in Jest's default configuration, you'll need to add the followin
  */
 
 const { test, expect } = require("@jest/globals");
-const { function1, function2, function3, etc. } = require("../script-name");
+const { function1, function2, function3, etc. } = require("../game.js");
 
 beforeAll(() => {
     let fs = require("fs");
-    let fileContents = fs.readFileSync("index.html", "utf-8");
+    let fileContents = fs.readFileSync("game.html", "utf-8");
     document.open();
     document.write(fileContents);
     document.close();
 });
 ```
-
-Remember to adjust the `fs.readFileSync()` to the specific file you'd like you test.
-The example above is testing the `index.html` file.
-
-Finally, at the bottom of the script file where your primary scripts are written, include the following at the bottom of the file.
-Make sure to include the name of all of your functions that are being tested in the `.test.js` file.
-
-```js
-if (typeof module !== "undefined") module.exports = {
-    function1, function2, function3, etc.
-};
-```
-
-Now that these steps have been undertaken, further tests can be written, and be expected to fail initially.
-Write JS code that can get the tests to pass as part of the Red-Green refactor process.
-
-Once ready, to run the tests, use this command:
-
-- `npm test`
-
-**NOTE**: To obtain a coverage report, use the following command:
-
-- `npm test --coverage`
-
 Below are the results from the tests that I've written for this application:
 
 | Test Suites | Tests | Screenshot |
 | --- | --- | --- |
-| 1 passed | 16 passed | ![screenshot](documentation/tests/js-test-coverage.png) |
-| x | x | repeat for all remaining tests |
-
-#### Jest Test Issues
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this section to list any known issues you ran into while writing your Jest tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+| 1 passed | 1 passed | ![screenshot](documentation/jest.webp) |
 
 ## Bugs
  see section on Defensive Testing Issues and Resolution

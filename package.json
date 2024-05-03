@@ -1,0 +1,23 @@
+{
+  "name": "project2flagit",
+  "version": "1.0.0",
+  "description": "[PROJECT2FLAGIT](https://coelecanth.github.io/project2FlagIt)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coelecanth/project2FlagIt.git"
+  },
+  "author": "stewart gibbons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coelecanth/project2FlagIt/issues"
+  },
+  "homepage": "https://github.com/Coelecanth/project2FlagIt#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
